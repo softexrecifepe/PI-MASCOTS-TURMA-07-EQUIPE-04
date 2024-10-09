@@ -1,7 +1,7 @@
 {
-  "name": "Nome do Seu App",
-  "short_name": "Nome Curto",
-  "description": "Descrição do seu app",
+  "name": "Maskots",
+  "short_name": "Maskots",
+  "description": "Uma aplicação abrangente e intuitiva para gerenciar uma clínica veterinária, chamada Maskots. Projetada para facilitar o agendamento de consultas, gerenciamento de registros de pacientes e comunicação com os proprietários de animais de estimação.",
   "start_url": "/",
   "display": "fullscreen",
   "background_color": "#ffffff",
