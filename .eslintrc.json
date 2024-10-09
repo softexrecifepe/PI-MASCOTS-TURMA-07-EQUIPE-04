@@ -1,0 +1,344 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // 🇧🇷 - Garante que o loop "for" atualize a variável de contagem na direção correta.
+    // 🇺🇸 - Ensures that the "for" loop updates the counter variable in the correct direction.
+    // "for-direction": "error",
+    //
+    // 🇧🇷 - Impede condições constantes, como usar `true` ou `false` diretamente em uma condição.
+    // 🇺🇸 - Prevents constant conditions, like using `true` or `false` directly in a condition.
+    // "no-constant-condition": ["error", { "checkLoops": false }],
+    //
+    // 🇧🇷 - Impede declarações de fluxo de controle no bloco "finally", pois isso pode causar comportamento inesperado.
+    // 🇺🇸 - Prevents control flow statements in the "finally" block, as this can cause unexpected behavior.
+    // "no-unsafe-finally": "error",
+    //
+    // 🇧🇷 - Desativa o uso de `alert`, `confirm`, e `prompt` no código.
+    // 🇺🇸 - Disables the use of `alert`, `confirm`, and `prompt` in the code.
+    // "no-alert": "warn",
+    //
+    // 🇧🇷 - Impede múltiplos espaços, exceto para indentação.
+    // 🇺🇸 - Prevents multiple spaces, except for indentation.
+    // "no-multi-spaces": ["error", { "ignoreEOLComments": false }],
+    //
+    // 🇧🇷 - Impede a reatribuição de parâmetros de função.
+    // 🇺🇸 - Prevents reassigning function parameters.
+    // "no-param-reassign": "error",
+    //
+    // 🇧🇷 - Exige que funções retornem sempre um valor ou nunca retornem.
+    // 🇺🇸 - Requires functions to always or never return a value.
+    // "consistent-return": "error",
+    //
+    // 🇧🇷 - Impede declarações de retorno redundantes, como `return;`.
+    // 🇺🇸 - Prevents redundant return statements, such as `return;`.
+    // "no-useless-return": "error",
+    //
+    // 🇧🇷 - Exige o uso de notação "camelCase" para nomes de variáveis e funções.
+    // 🇺🇸 - Enforces the use of camelCase notation for variable and function names.
+    // "camelcase": ["error", { "properties": "never" }],
+    //
+    // 🇧🇷 - Garante espaçamento consistente antes dos parênteses de uma função.
+    // 🇺🇸 - Ensures consistent spacing before function parentheses.
+    // "space-before-function-paren": ["error", "always"],
+    //
+    // 🇧🇷 - Desativa o uso de `eval()`, que pode ser perigoso.
+    // 🇺🇸 - Disables the use of `eval()`, which can be dangerous.
+    // "no-eval": "error",
+    //
+    // 🇧🇷 - Impede atribuições dentro de expressões condicionais.
+    // 🇺🇸 - Prevents assignments within conditional expressions.
+    // "no-cond-assign": ["error", "always"],
+    //
+    // 🇧🇷 - Desativa o uso de `console`, exceto para `console.warn` e `console.error`.
+    // 🇺🇸 - Disables the use of `console`, except for `console.warn` and `console.error`.
+    // "no-console": ["warn", { "allow": ["warn", "error"] }],
+    //
+    // 🇧🇷 - Impede a modificação de variáveis declaradas com `const`.
+    // 🇺🇸 - Prevents modification of variables declared with `const`.
+    // "no-const-assign": "error",
+    //
+    // 🇧🇷 - Impede o uso de funções dentro de loops para evitar comportamento inesperado.
+    // 🇺🇸 - Prevents the use of functions within loops to avoid unexpected behavior.
+    // "no-loop-func": "error",
+    //
+    // 🇧🇷 - Impede o uso de ponto e vírgula desnecessário.
+    // 🇺🇸 - Prevents the use of unnecessary semicolons.
+    // "no-extra-semi": "error",
+    //
+    // 🇧🇷 - Impede o uso de variáveis não utilizadas para manter o código limpo.
+    // 🇺🇸 - Prevents the use of unused variables to keep the code clean.
+    // "no-unused-vars": [
+    //   "error",
+    //   { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }
+    // ],
+    //
+    // 🇧🇷 - Impede o uso de variáveis antes de serem definidas.
+    // 🇺🇸 - Prevents the use of variables before they are defined.
+    // "no-use-before-define": [
+    //   "error",
+    //   { "functions": true, "classes": true, "variables": true }
+    // ],
+    //
+    // 🇧🇷 - Exige o uso consistente de aspas simples para strings.
+    // 🇺🇸 - Enforces the consistent use of single quotes for strings.
+    // "quotes": ["error", "single", { "avoidEscape": true }],
+    //
+    // 🇧🇷 - Garante indentação consistente usando 2 espaços.
+    // 🇺🇸 - Ensures consistent indentation using 2 spaces.
+    // "indent": ["error", 2, { "SwitchCase": 1 }],
+    //
+    // 🇧🇷 - Garante o uso consistente de quebra de linha no estilo Unix.
+    // 🇺🇸 - Ensures the consistent use of Unix-style line breaks.
+    // "linebreak-style": ["error", "unix"],
+    //
+    // 🇧🇷 - Exige o uso de `===` e `!==` em vez de `==` e `!=`.
+    // 🇺🇸 - Requires the use of `===` and `!==` instead of `==` and `!=`.
+    // "eqeqeq": ["error", "always", { "null": "ignore" }],
+    //
+    // 🇧🇷 - Exige o uso consistente de vírgula final em literais de objetos e arrays.
+    // 🇺🇸 - Enforces the consistent use of trailing commas in object and array literals.
+    // "comma-dangle": ["error", "always-multiline"],
+    //
+    // 🇧🇷 - Impede o uso de chaves duplicadas em objetos.
+    // 🇺🇸 - Prevents the use of duplicate keys in objects.
+    // "no-dupe-keys": "error",
+    //
+    // 🇧🇷 - Impede a duplicação de casos em switch statements.
+    // 🇺🇸 - Prevents duplicate case labels in switch statements.
+    // "no-duplicate-case": "error",
+    //
+    // 🇧🇷 - Impede a concatenação desnecessária de strings.
+    // 🇺🇸 - Prevents unnecessary concatenation of strings.
+    // "no-useless-concat": "error",
+    //
+    // 🇧🇷 - Impede o uso de literais octais, que podem causar confusão.
+    // 🇺🇸 - Prevents the use of octal literals, which can be confusing.
+    // "no-octal": "error",
+    //
+    // 🇧🇷 - Exige ou impede espaços dentro de parênteses.
+    // 🇺🇸 - Requires or prevents spaces inside parentheses.
+    // "space-in-parens": ["error", "never"],
+    //
+    // 🇧🇷 - Garante espaçamento antes e depois de palavras-chave.
+    // 🇺🇸 - Ensures spacing before and after keywords.
+    // "keyword-spacing": ["error", { "before": true, "after": true }],
+    //
+    // 🇧🇷 - Limita o uso de múltiplas linhas vazias no código.
+    // 🇺🇸 - Limits the use of multiple empty lines in the code.
+    // "no-multiple-empty-lines": [
+    //   "error",
+    //   { "max": 1, "maxBOF": 0, "maxEOF": 1 }
+    // ],
+    //
+    // 🇧🇷 - Desativa o uso de `with`, que pode causar confusão.
+    // 🇺🇸 - Disables the use of `with`, which can cause confusion.
+    // "no-with": "error",
+    //
+    // 🇧🇷 - Exige o uso consistente do modo estrito (`strict mode`).
+    // 🇺🇸 - Enforces the consistent use of strict mode.
+    // "strict": ["error", "global"],
+    //
+    // 🇧🇷 - Exige ou impede o uso de ponto e vírgula no final de instruções.
+    // 🇺🇸 - Requires or prevents the use of semicolons at the end of statements.
+    // "semi": ["error", "always"],
+    //
+    // 🇧🇷 - Impede a declaração de variáveis que sombreiam variáveis externas.
+    // 🇺🇸 - Prevents the declaration of variables that shadow external variables.
+    // "no-shadow": "error",
+    //
+    // 🇧🇷 - Desativa o uso de `this` fora de classes ou funções de construtor.
+    // 🇺🇸 - Disables the use of `this` outside of classes or constructor functions.
+    // "no-invalid-this": "error",
+    //
+    // 🇧🇷 - Impede o uso de operadores bitwise para evitar confusão.
+    // 🇺🇸 - Prevents the use of bitwise operators to avoid confusion.
+    // "no-bitwise": "error",
+    //
+    // 🇧🇷 - Exige ou impede espaços ao redor do operador de atribuição.
+    // 🇺🇸 - Requires or prevents spaces around the assignment operator.
+    // "space-infix-ops": "error",
+    //
+    // 🇧🇷 - Garante espaçamento consistente em torno de blocos.
+    // 🇺🇸 - Ensures consistent spacing around blocks.
+    // "block-spacing": "error",
+    //
+    // 🇧🇷 - Impede o uso de variáveis não declaradas.
+    // 🇺🇸 - Prevents the use of undeclared variables.
+    // "no-undef": "error",
+    //
+    // 🇧🇷 - Impede a omissão de parênteses em chamadas de construtor.
+    // 🇺🇸 - Prevents omitting parentheses in constructor calls.
+    // "new-parens": "error",
+    //
+    // 🇧🇷 - Exige a declaração de todas as variáveis no topo de seus escopos.
+    // 🇺🇸 - Requires all variables to be declared at the top of their scopes.
+    // "vars-on-top": "error",
+    //
+    // 🇧🇷 - Impede o uso de variáveis com o mesmo nome em escopos diferentes.
+    // 🇺🇸 - Prevents the use of variables with the same name in different scopes.
+    // "no-redeclare": "error",
+    //
+    // 🇧🇷 - Impede a atribuição de propriedades de objeto a si mesmas.
+    // 🇺🇸 - Prevents assigning object properties to themselves.
+    // "no-self-assign": "error",
+    //
+    // 🇧🇷 - Impede a comparação de uma variável consigo mesma.
+    // 🇺🇸 - Prevents comparing a variable to itself.
+    // "no-self-compare": "error",
+    //
+    // 🇧🇷 - Desativa o uso de operadores ternários aninhados.
+    // 🇺🇸 - Disables the use of nested ternary operators.
+    // "no-nested-ternary": "error",
+    //
+    // 🇧🇷 - Impede o uso de chamadas de função sem parênteses de invocação.
+    // 🇺🇸 - Prevents the use of function calls without invocation parentheses.
+    // "no-unexpected-multiline": "error",
+    //
+    // 🇧🇷 - Garante que os blocos de código estejam indentados de forma consistente.
+    // 🇺🇸 - Ensures that code blocks are consistently indented.
+    // "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    //
+    // 🇧🇷 - Garante a consistência do espaçamento antes e depois dos operadores de chave.
+    // 🇺🇸 - Ensures consistency in spacing before and after key operators.
+    // "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    //
+    // 🇧🇷 - Impede o uso de `else` após `return` em um bloco de código.
+    // 🇺🇸 - Prevents the use of `else` after `return` in a code block.
+    // "no-else-return": ["error", { "allowElseIf": false }],
+    //
+    // 🇧🇷 - Garante a declaração de todos os métodos de classe.
+    // 🇺🇸 - Ensures the declaration of all class methods.
+    // "class-methods-use-this": [
+    //   "error",
+    //   { "exceptMethods": [], "enforceForClassFields": true }
+    // ],
+    //
+    // 🇧🇷 - Impede a sobrescrita de variáveis nativas.
+    // 🇺🇸 - Prevents overwriting native variables.
+    // "no-native-reassign": "error",
+    //
+    // 🇧🇷 - Impede a redefinição de variáveis que não podem ser reassigned.
+    // 🇺🇸 - Prevents redefinition of variables that cannot be reassigned.
+    // "no-redeclare": ["error", { "builtinGlobals": true }],
+    //
+    // 🇧🇷 - Impede a declaração de variáveis dentro de `case` em um switch sem usar chaves.
+    // 🇺🇸 - Prevents the declaration of variables inside `case` in a switch without using braces.
+    // "no-case-declarations": "error",
+    //
+    // 🇧🇷 - Garante o uso consistente de vírgulas no final de objetos e arrays.
+    // 🇺🇸 - Ensures consistent use of commas at the end of objects and arrays.
+    // "comma-dangle": ["error", "always-multiline"],
+    //
+    // 🇧🇷 - Impede o uso de vírgulas no final de uma linha.
+    // 🇺🇸 - Prevents the use of commas at the end of a line.
+    // "no-comma-dangle": "error",
+    //
+    // 🇧🇷 - Garante a consistência no uso de aspas em atributos JSX.
+    // 🇺🇸 - Ensures consistency in the use of quotes in JSX attributes.
+    // "jsx-quotes": ["error", "prefer-double"],
+    //
+    // 🇧🇷 - Exige o uso de retorno em funções de ordem superior.
+    // 🇺🇸 - Requires the use of return in higher-order functions.
+    // "array-callback-return": "error",
+    //
+    // 🇧🇷 - Impede a declaração de variáveis que não são usadas no código.
+    // 🇺🇸 - Prevents the declaration of variables that are not used in the code.
+    // "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
+    //
+    // 🇧🇷 - Impede a declaração de funções que nunca são chamadas.
+    // 🇺🇸 - Prevents the declaration of functions that are never called.
+    // "no-unused-functions": "error",
+    //
+    // 🇧🇷 - Impede a declaração de métodos que nunca são chamados.
+    // 🇺🇸 - Prevents the declaration of methods that are never called.
+    // "no-unused-methods": "error",
+    //
+    // 🇧🇷 - Garante a consistência no uso de parênteses ao chamar funções.
+    // 🇺🇸 - Ensures consistency in the use of parentheses when calling functions.
+    // "func-call-spacing": ["error", "never"],
+    //
+    // 🇧🇷 - Impede a reatribuição de parâmetros de função.
+    // 🇺🇸 - Prevents the reassignment of function parameters.
+    // "no-param-reassign": ["error", { "props": false }],
+    //
+    // 🇧🇷 - Garante a consistência no uso de colchetes ao declarar arrays.
+    // 🇺🇸 - Ensures consistency in the use of brackets when declaring arrays.
+    // "array-bracket-spacing": ["error", "never"],
+    //
+    // 🇧🇷 - Garante que os identificadores sejam escritos em camelCase.
+    // 🇺🇸 - Ensures that identifiers are written in camelCase.
+    // "camelcase": ["error", { "properties": "never" }],
+    //
+    // 🇧🇷 - Impede a criação de variáveis que sombreiam variáveis globais.
+    // 🇺🇸 - Prevents the creation of variables that shadow global variables.
+    // "no-shadow": ["error", { "hoist": "all" }],
+    //
+    // 🇧🇷 - Garante que os espaços sejam consistentes em objetos.
+    // 🇺🇸 - Ensures that spaces are consistent in objects.
+    // "object-curly-spacing": ["error", "always"],
+    //
+    // 🇧🇷 - Garante a consistência no uso de operadores ao longo do código.
+    // 🇺🇸 - Ensures consistency in the use of operators throughout the code.
+    // "operator-linebreak": ["error", "before"],
+    //
+    // 🇧🇷 - Impede a declaração de variáveis com o mesmo nome em diferentes escopos.
+    // 🇺🇸 - Prevents the declaration of variables with the same name in different scopes.
+    // "no-redeclare": ["error", { "builtinGlobals": false }],
+    //
+    // 🇧🇷 - Garante a consistência no uso de chaves em blocos de código.
+    // 🇺🇸 - Ensures consistency in the use of braces in code blocks.
+    // "curly": ["error", "all"],
+    //
+    // 🇧🇷 - Impede a declaração de variáveis que não são usadas no código.
+    // 🇺🇸 - Prevents the declaration of variables that are not used in the code.
+    // "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    //
+    // 🇧🇷 - Impede o uso de funções que não estão definidas no código.
+    // 🇺🇸 - Prevents the use of functions that
+    // "no-unused-functions": "error",
+    //
+    // 🇧🇷 - Impede a declaração de métodos que não são utilizados.
+    // 🇺🇸 - Prevents the declaration of methods that are not used.
+    // "no-unused-methods": "error",
+    //
+    // 🇧🇷 - Garante a consistência no uso de colchetes ao declarar arrays.
+    // 🇺🇸 - Ensures consistency in the use of brackets when declaring arrays.
+    // "array-bracket-spacing": ["error", "never"],
+    //
+    // 🇧🇷 - Garante que os identificadores sejam escritos em camelCase.
+    // 🇺🇸 - Ensures that identifiers are written in camelCase.
+    // "camelcase": ["error", { "properties": "never" }],
+    //
+    // 🇧🇷 - Impede a criação de variáveis que sombreiam variáveis globais.
+    // 🇺🇸 - Prevents the creation of variables that shadow global variables.
+    // "no-shadow": ["error", { "hoist": "all" }],
+    //
+    // 🇧🇷 - Garante que os espaços sejam consistentes em objetos.
+    // 🇺🇸 - Ensures that spaces are consistent in objects.
+    // "object-curly-spacing": ["error", "always"],
+    //
+    // 🇧🇷 - Garante a consistência no uso de operadores ao longo do código.
+    // 🇺🇸 - Ensures consistency in the use of operators throughout the code.
+    // "operator-linebreak": ["error", "before"],
+    //
+    // 🇧🇷 - Impede a declaração de variáveis com o mesmo nome em diferentes escopos.
+    // 🇺🇸 - Prevents the declaration of variables with the same name in different scopes.
+    // "no-redeclare": ["error", { "builtinGlobals": false }],
+    //
+    // 🇧🇷 - Garante a consistência no uso de chaves em blocos de código.
+    // 🇺🇸 - Ensures consistency in the use of braces in code blocks.
+    // "curly": ["error", "all"],
+    //
+    // 🇧🇷 - Impede a declaração de variáveis que não são usadas no código.
+    // 🇺🇸 - Prevents the declaration of variables that are not used in the code.
+    // "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    //
+    // 🇧🇷 - Impede o uso de funções que não estão definidas no código.
+    // 🇺🇸 - Prevents the use of functions that are not defined in the code.
+    // "no-undef": "error",
+    //
+    // 🇧🇷 - Impede a definição de funções anônimas dentro de expressões.
+    // 🇺🇸 - Prevents defining anonymous functions within expressions.
+    // "no-function-declaration-in-loop": "error"
+  }
+}

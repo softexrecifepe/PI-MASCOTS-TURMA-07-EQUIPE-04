@@ -7,5 +7,5 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.backgrounds.secondary};
-  color: ${({ theme }) => theme.colors.fonts.primary};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;

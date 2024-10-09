@@ -1,3 +1,4 @@
+import React from "react";
 import { HeadLinks } from "@/components/Links";
 import Document, {
   Html,
