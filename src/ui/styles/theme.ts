@@ -13,7 +13,7 @@ const theme = {
   },
   colors: {
     backgrounds: {
-      primary: "#000000",
+      primary: "#442150",
       secondary: "#2AFAA8",
       tertiary: "#ffffff",
       quaternary: "#12b072",
