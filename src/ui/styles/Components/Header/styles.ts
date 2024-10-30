@@ -20,6 +20,10 @@ export const Searchbar = styled.div`
     padding: 0.5rem 1rem;          /* Espaço interno na barra de pesquisa */
 `;
 
-export const Imagestyle = styled(Image)`
-    margin-left: 6rem;
+export const ImageLogo = styled(Image)`
+     margin-left: 0rem;
+`;
+
+export const ImageMenu = styled(Image)`
+    margin-left: 1rem;
 `;
