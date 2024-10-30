@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderContainer, Searchbar, Imagestyle } from "@/ui/styles/Components/Header/styles";
 import Image from "next/image";
-import img from "@/ui/assets/images/Logo.svg";
+import img from "@/ui/assets/images/Logo 50x50.svg";
 
 export function Header() {
   return (

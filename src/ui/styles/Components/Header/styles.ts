@@ -21,6 +21,5 @@ export const Searchbar = styled.div`
 `;
 
 export const Imagestyle = styled(Image)`
-    color: white;
-    margin-right: 1rem;
+    margin-left: 6rem;
 `;
