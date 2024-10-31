@@ -14,20 +14,8 @@ export const HeaderContainer = styled.div`
 `;
 
 export const StyledInput = styled.input`
+    align-items: center;
     border-radius: 25px;
-    border: 1px solid #44215D;
-    background-color: #D9D9D9;
-    padding: 0.5rem 1rem;
-    margin: 0 1.5rem;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px; /* Adicionada uma largura máxima */
-    outline: none;
-
-    /* Adicionado estilo para o placeholder */
-    &::placeholder {
-        color: #666;
-    }
 `;
 
 
