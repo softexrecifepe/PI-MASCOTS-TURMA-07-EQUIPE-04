@@ -8,6 +8,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { Buttom } from "@/components/Buttom";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -45,6 +46,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Buttom />
         </body>
       </Html>
     );
