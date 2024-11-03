@@ -7,11 +7,11 @@ export const StyledInputContainer = styled.div`
 `;
 
 export const StyledInput = styled.input`
-  border-radius: 1.5625rem;
-  width: 30rem;
+  border: none;
+  width: 34rem;
   height: 1.875rem;
   outline: none;
-  border-radius: 1.5625rem;
+  border-radius: 1.563rem;
 `;
 
 export const IconSearch = styled(Image)`
