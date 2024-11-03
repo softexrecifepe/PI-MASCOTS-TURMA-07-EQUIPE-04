@@ -52,3 +52,7 @@ export const Iconprofile = styled(Image)`
   margin-right: 1.188rem;
   cursor: pointer;
 `;
+
+export const ImageNotification = styled(Image)`
+  cursor: pointer;
+`;
