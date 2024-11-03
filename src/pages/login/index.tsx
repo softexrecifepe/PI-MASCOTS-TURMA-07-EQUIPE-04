@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { LoginContainer, LeftColumn, RightColumn, FormContainer, FooterText, Title, Divider, Input, StyledLink, BackgroundImageContainer } from "@/ui/styles/Components/login/styles"
+import { LoginContainer, LeftColumn, RightColumn, FormContainer, FooterText, Title, Divider, Input, StyledLink, BackgroundImageContainer, StyledLink1 } from "@/ui/styles/Components/login/styles"
 import { Button } from "@/components/Button";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
@@ -24,8 +24,7 @@ export default function Login () {
                     <Input type="password" placeholder="Senha" />
                     <StyledLink  href="#">Esqueceu a senha?</StyledLink >
                     <Button text="ENTRAR" />
-                    <p>Não possui conta? <StyledLink  href="#">Registre-se</StyledLink ></p>
-                    
+                    <StyledLink1  href="#">Não possui conta? Registre-se</StyledLink1>
                     <FooterText>Ao entrar, você concorda com todos os termos e condições de uso.</FooterText>
                 </FormContainer>
             </RightColumn>
