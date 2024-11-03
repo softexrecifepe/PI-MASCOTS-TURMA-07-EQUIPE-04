@@ -116,6 +116,7 @@ export const FooterText = styled.p`
     line-height: normal;
     color: ${({theme}) => theme.colors.text.primary};
     text-align: center;
+    justify-content: center;
     padding-top: 0.3125rem; 
 `;
 

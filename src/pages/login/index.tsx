@@ -23,7 +23,7 @@ export default function Login () {
                     <Input type="email" placeholder="E-mail" />
                     <Input type="password" placeholder="Senha" />
                     <StyledLink  href="#">Esqueceu a senha?</StyledLink >
-                    <Button text="ENTRAR" />
+                    <Button text="ENTRAR" variant="primary" onClick={() => (console.log("teste"))}/>
                     <StyledLink1  href="#">Não possui conta? Registre-se</StyledLink1>
                     <FooterText>Ao entrar, você concorda com todos os termos e condições de uso.</FooterText>
                 </FormContainer>
