@@ -41,7 +41,7 @@ export const RightColumn = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e0e0e0;
+    background-color: ${({theme}) => theme.colors.backgrounds.sextinary};
     border-radius: 10.625rem 0 0 9.375rem;
 `;
 
@@ -60,16 +60,19 @@ export const Divider = styled.div`
     color: ${({theme}) => theme.colors.text.primary};
     font-size: ${({theme}) => theme.sizes.font.quaternary};
     font-weight: 400;
+    margin-top: 145px;
+    margin-bottom: 45px;
 `;
 
 // Campos de entrada (input)
 export const Input = styled.input`
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    display: flex;
+    width: 444px;
+    height: 39px;
+    border: none;
+    border-bottom: 1px solid ${({theme}) => theme.colors.border.colors.tertiary};;
+    font-size: 12px;
+    background-color: ${({theme}) => theme.colors.backgrounds.sextinary};
 `;
 
 // Links estilizados
@@ -87,8 +90,11 @@ export const StyledLink = styled.a`
 
 // Texto no rodapé
 export const FooterText = styled.p`
-    display: flexbox;
-    font-size: 12px;
-    color: #999;
-    margin-top: 20px;
+    font-family: "Magra", sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: ${({theme}) => theme.colors.text.primary};
+    text-align: center;
 `;

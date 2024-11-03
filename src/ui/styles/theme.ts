@@ -31,6 +31,7 @@ const theme = {
       colors: {
         primary: "#77b042",
         secundary: "#000000",
+        tertiary: "#44215d",
       },
     },
   },

@@ -25,8 +25,9 @@ export default function Login () {
                     <StyledLink  href="#">Esqueceu a senha?</StyledLink >
                     <Button text="ENTRAR" />
                     <p>Não possui conta? <StyledLink  href="#">Registre-se</StyledLink ></p>
+                    
+                    <FooterText>Ao entrar, você concorda com todos os termos e condições de uso.</FooterText>
                 </FormContainer>
-                <FooterText>Ao entrar, você concorda com todos os termos e condições de uso.</FooterText>
             </RightColumn>
         </LoginContainer>
     )
