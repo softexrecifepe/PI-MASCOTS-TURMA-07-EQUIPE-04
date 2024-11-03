@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "@/components/SEO";
 import { HomePageTextsSEO } from "@/components/SEO/seoTexts";
+import { Button } from "@/components/Button";
 
 export default function Home() {
   const seoText = HomePageTextsSEO;
@@ -17,6 +18,7 @@ export default function Home() {
       />
 
       <h1>home page</h1>
+      <Button />
     </div>
   );
 }

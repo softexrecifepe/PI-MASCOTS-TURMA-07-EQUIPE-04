@@ -3,6 +3,6 @@ import { PrimaryButton } from "@/ui/styles/Components/Button/styles"
 
 export function Button() {
     return (
-        <PrimaryButton> Botão</PrimaryButton >
+        <PrimaryButton>Botão</PrimaryButton >
     )
 }
