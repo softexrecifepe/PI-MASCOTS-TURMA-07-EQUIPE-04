@@ -1,8 +1,12 @@
 import React from "react";
 import { PrimaryButton } from "@/ui/styles/Components/Button/styles"
 
-export function Button() {
+
+interface ButtonProps {
+    text: string;
+};
+export function Button({text}:ButtonProps) {
     return (
-        <PrimaryButton>Botão</PrimaryButton >
+        <PrimaryButton>{text}</PrimaryButton >
     )
 }
