@@ -43,6 +43,11 @@ export const RightGroup = styled.div`
   gap: 1.25rem;
 `;
 
-export const MenuWrappe = styled(Image)`  
+export const MenuWrappe = styled.div`  
   margin-left: 2.125rem;
+  cursor: pointer;
+`;
+
+export const Profile = styled(Image)`
+  margin-right: 1.188rem;
 `;
