@@ -48,6 +48,7 @@ export const MenuWrappe = styled.div`
   cursor: pointer;
 `;
 
-export const Profile = styled(Image)`
+export const Iconprofile = styled(Image)`
   margin-right: 1.188rem;
+  cursor: pointer;
 `;
