@@ -5,9 +5,9 @@ import { Header } from "../Header";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
