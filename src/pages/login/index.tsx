@@ -22,8 +22,8 @@ export default function Login () {
                     <Divider>OU</Divider>
                     <Input type="email" placeholder="E-mail" />
                     <Input type="password" placeholder="Senha" />
-                    <Button text="ENTRAR" />
                     <StyledLink  href="#">Esqueceu a senha?</StyledLink >
+                    <Button text="ENTRAR" />
                     <p>Não possui conta? <StyledLink  href="#">Registre-se</StyledLink ></p>
                 </FormContainer>
                 <FooterText>Ao entrar, você concorda com todos os termos e condições de uso.</FooterText>

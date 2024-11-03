@@ -45,24 +45,21 @@ export const RightColumn = styled.div`
     border-radius: 10.625rem 0 0 9.375rem;
 `;
 
-// Container do formulário para estilizar a área de login
 export const FormContainer = styled.div`
     text-align: center;
 `;
 
-// Título no topo do formulário
+
 export const Title = styled.h2`
     font-size: ${({theme}) => theme.sizes.font.quaternary};
     color: ${({theme}) => theme.colors.text.primary};
-    font-family: "Creepy", sans-serif; /* Fonte personalizada para combinar com a imagem */
+    font-family: "Kablammo", sans-serif; /* Fonte personalizada para combinar com a imagem */
 `;
 
-// Divisor para o texto "OU"
 export const Divider = styled.div`
-    margin: 20px 0;
-    color: #666;
-    font-size: 18px;
-    font-weight: bold;
+    color: ${({theme}) => theme.colors.text.primary};
+    font-size: ${({theme}) => theme.sizes.font.quaternary};
+    font-weight: 400;
 `;
 
 // Campos de entrada (input)
@@ -90,6 +87,7 @@ export const StyledLink = styled.a`
 
 // Texto no rodapé
 export const FooterText = styled.p`
+    display: flexbox;
     font-size: 12px;
     color: #999;
     margin-top: 20px;
