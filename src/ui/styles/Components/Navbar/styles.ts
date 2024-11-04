@@ -1,3 +1,4 @@
+import { hexToRgba } from "@/utils/functions/hexToRgba";
 import styled from "styled-components";
 
 export const Container = styled.nav<{ isVisible: boolean }>`
@@ -6,9 +7,10 @@ export const Container = styled.nav<{ isVisible: boolean }>`
   background-color: ${({ theme }) => theme.colors.backgrounds.primary};
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 5rem;
-  gap: 2rem;
+  /* padding-left: calc((17rem - 80%) / 2); */
+  padding-left: 1.5rem;
+  gap: 1rem;
 
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transform: ${({ isVisible }) =>
@@ -17,8 +19,20 @@ export const Container = styled.nav<{ isVisible: boolean }>`
 `;
 
 export const Itens = styled.div`
-  background-color: blue;
-  width: 100%;
+  max-width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.text.secondary};
+  gap: 0.6rem;
+  padding-left: 1.3rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: ${({ theme }) =>
+      hexToRgba(theme.colors.backgrounds.sextinary, 0.5)};
+  }
 `;
