@@ -25,12 +25,12 @@ export function Header() {
   };
 
   const viewprofile = () => {
-    setProfileVisible(!isProfileVisible)
-  }
+    setProfileVisible(!isProfileVisible);
+  };
 
   const viewisNotification = () => {
-    setNotificationVisible(!isNotificationVisible)
-  }
+    setNotificationVisible(!isNotificationVisible);
+  };
 
   return (
     <>
@@ -45,14 +45,20 @@ export function Header() {
         <StyledInput type="text" name="search" />
 
         <RightGroup>
-          <ImageNotification onClick={viewisNotification} alt="notification" src={imgnotification} />
-          <Iconprofile onClick={viewprofile} alt="Iconprofile" src={iconprofile} />
+          <ImageNotification
+            onClick={viewisNotification}
+            alt="notification"
+            src={imgnotification}
+          />
+          <Iconprofile
+            onClick={viewprofile}
+            alt="Iconprofile"
+            src={iconprofile}
+          />
         </RightGroup>
       </HeaderContainer>
 
-      
-      {isNavbarVisible && <Navbar />}
+      <Navbar isVisible={isNavbarVisible} />
     </>
   );
 }
-
