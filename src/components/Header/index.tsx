@@ -14,6 +14,8 @@ import Image from "next/image";
 import imgnotification from "@/ui/assets/icons/Notoficstion icon.svg";
 import iconprofile from "@/ui/assets/icons/Vector.svg";
 import { Navbar } from "../Navbar";
+import NotificationIcon from "@/ui/assets/icons/Notification";
+import ProfileIcon from "@/ui/assets/icons/Profile";
 
 export function Header() {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
@@ -45,16 +47,20 @@ export function Header() {
         <StyledInput type="text" name="search" />
 
         <RightGroup>
-          <ImageNotification
+          {/* <ImageNotification
             onClick={viewisNotification}
             alt="notification"
             src={imgnotification}
-          />
-          <Iconprofile
+          /> */}
+          <NotificationIcon />
+
+          {/* <Iconprofile
             onClick={viewprofile}
             alt="Iconprofile"
             src={iconprofile}
-          />
+          /> */}
+
+          <ProfileIcon />
         </RightGroup>
       </HeaderContainer>
 
