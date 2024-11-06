@@ -17,7 +17,6 @@ export const Container = styled.nav<{ $isVisible: boolean }>`
 `;
 
 export const Itens = styled.div`
-  /* background-color: blue; */
   width: 80%;
   display: flex;
   justify-content: start;
