@@ -11,8 +11,8 @@ export const Navbar: React.FC<NavbarProps> = ({ isVisible }) => {
     <Container isVisible={isVisible}>
       {itens.map((item) => (
         <Itens key={item.id}>
-          {item.icon}
-          {item.title}
+          <div>{item.icon}</div>
+          <div>{item.title}</div>
         </Itens>
       ))}
     </Container>
