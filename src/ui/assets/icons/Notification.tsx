@@ -7,9 +7,9 @@ interface CustomIconProps {
 }
 
 const NotificationIcon: React.FC<CustomIconProps> = ({
-  width = 18,
+  width = 20,
   height = 20,
-  fill = "black",
+  fill = "#ffffff",
 }) => (
   <svg
     width={width}
