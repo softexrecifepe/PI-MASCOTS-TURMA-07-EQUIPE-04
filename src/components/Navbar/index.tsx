@@ -3,12 +3,12 @@ import { Container, Itens } from "@/ui/styles/Components/Navbar/styles";
 import { itens } from "./itens";
 
 interface NavbarProps {
-  isVisible: boolean;
+  $isVisible: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ isVisible }) => {
+export const Navbar: React.FC<NavbarProps> = ({ $isVisible }) => {
   return (
-    <Container isVisible={isVisible}>
+    <Container $isVisible={$isVisible}>
       {itens.map((item) => (
         <Itens key={item.id}>
           <div>{item.icon}</div>

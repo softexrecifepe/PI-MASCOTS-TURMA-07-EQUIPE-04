@@ -9,7 +9,6 @@ import {
   ImageNotification,
 } from "@/ui/styles/Components/Header/styles";
 import logo from "@/ui/assets/images/Logo 50x50.svg";
-import menu from "@/ui/assets/icons/";
 import Image from "next/image";
 import imgnotification from "@/ui/assets/icons/Notoficstion icon.svg";
 import iconprofile from "@/ui/assets/icons/Vector.svg";
@@ -65,7 +64,7 @@ export function Header() {
         </RightGroup>
       </HeaderContainer>
 
-      <Navbar isVisible={isNavbarVisible} />
+      <Navbar $isVisible={isNavbarVisible} />
     </>
   );
 }
