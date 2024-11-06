@@ -18,6 +18,7 @@ const theme = {
       tertiary: "#1c1c1c",
       quaternary: "#ffffff",
       quinary: "#f5f5f5",
+      sextinary: "#D9D9D9",
     },
     text: {
       primary: "#000000",
@@ -30,6 +31,7 @@ const theme = {
       colors: {
         primary: "#77b042",
         secundary: "#000000",
+        tertiary: "#44215d",
       },
     },
   },
@@ -38,6 +40,7 @@ const theme = {
       primary: "1rem",
       secundary: "1.5rem",
       terciary: "2rem",
+      quaternary: "2.5rem"
     },
     border: {
       primary: "2px",

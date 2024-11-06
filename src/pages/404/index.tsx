@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Container } from "@/ui/styles/pages/404/styles";
+import { Container } from "@/ui/styles/Pages/404/styles";
 
 export default function Custom404() {
   const router = useRouter();
