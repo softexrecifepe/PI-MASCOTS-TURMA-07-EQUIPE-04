@@ -9,13 +9,14 @@ import {
   ImageNotification,
 } from "@/ui/styles/Components/Header/styles";
 import logo from "@/ui/assets/images/Logo 50x50.svg";
-import menu from "@/ui/assets/images/menu.svg";
+import menu from "@/ui/assets/icons/";
 import Image from "next/image";
 import imgnotification from "@/ui/assets/icons/Notoficstion icon.svg";
 import iconprofile from "@/ui/assets/icons/Vector.svg";
 import { Navbar } from "../Navbar";
 import NotificationIcon from "@/ui/assets/icons/Notification";
 import ProfileIcon from "@/ui/assets/icons/Profile";
+import MenuIcon from "@/ui/assets/icons/menu";
 
 export function Header() {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
@@ -39,7 +40,7 @@ export function Header() {
       <HeaderContainer>
         <LeftGroup>
           <MenuWrappe onClick={toggleNavbar}>
-            <Image src={menu} alt="Menu" />
+            <MenuIcon />
           </MenuWrappe>
           <Image alt="logo" src={logo} />
         </LeftGroup>
