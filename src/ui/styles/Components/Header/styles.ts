@@ -33,7 +33,6 @@ export const LeftGroup = styled.div`
   align-items: center;
   justify-content: center;
   gap: 3.25rem;
-  
 `;
 
 export const RightGroup = styled.div`
@@ -43,7 +42,7 @@ export const RightGroup = styled.div`
   gap: 1.25rem;
 `;
 
-export const MenuWrappe = styled.div`  
+export const MenuWrappe = styled.div`
   margin-left: 2.125rem;
   cursor: pointer;
 `;
