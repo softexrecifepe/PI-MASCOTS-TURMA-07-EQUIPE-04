@@ -8,7 +8,7 @@ export const Container = styled.nav<{ $isVisible: boolean }>`
   flex-direction: column;
   align-items: center;
   padding-top: 5rem;
-  gap: 2rem;
+  gap: 1rem;
 
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   transform: ${({ $isVisible }) =>
@@ -17,8 +17,21 @@ export const Container = styled.nav<{ $isVisible: boolean }>`
 `;
 
 export const Itens = styled.div`
-  background-color: blue;
-  width: 100%;
+  /* background-color: blue; */
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  border-radius: 15px;
+  padding: 0.5rem;
+  gap: 0.75rem;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.text.secondary};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.backgrounds.sextinary};
+    color: ${({ theme }) => theme.colors.text.primary};
+  }
 `;
