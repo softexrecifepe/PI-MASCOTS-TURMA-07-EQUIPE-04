@@ -1,3 +1,12 @@
+export const DefaultTextsSEO = {
+  title: "Página inicial",
+  description: "Gerencie sua clinica veterinária de forma simples e eficiente.",
+  keywords: "clinica veterinária, gerenciamento, pets, animais, maskots",
+  author: "Maskots",
+  url: "https://www.seusite.com",
+  image: "https://www.seusite.com/imagem.jpg",
+};
+
 export const HomePageTextsSEO = {
   title: "Página inicial",
   description: "Gerencie sua clinica veterinária de forma simples e eficiente.",
