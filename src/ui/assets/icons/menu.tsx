@@ -9,7 +9,7 @@ interface CustomIconProps {
 const MenuIcon: React.FC<CustomIconProps> = ({
   width = 40,
   height = 40,
-  fill = "#000000",
+  fill = "#ffffff",
 }) => (
   <svg
     width={width}
