@@ -7,7 +7,7 @@ export const Container = styled.nav<{ $isVisible: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
   gap: 1rem;
 
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
