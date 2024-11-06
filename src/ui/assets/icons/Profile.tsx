@@ -7,9 +7,9 @@ interface CustomIconProps {
 }
 
 const ProfileIcon: React.FC<CustomIconProps> = ({
-  width = 16,
-  height = 16,
-  fill = "black",
+  width = 32,
+  height = 32,
+  fill = "#ffffff",
 }) => (
   <svg
     width={width}
