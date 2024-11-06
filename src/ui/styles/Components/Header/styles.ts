@@ -44,6 +44,5 @@ export const RightGroup = styled.div`
 `;
 
 export const Icons = styled.div`
-  background-color: yellow;
-  cursor: pointer;
+  cursor: pointer;s
 `;
