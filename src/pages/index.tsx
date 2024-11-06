@@ -9,7 +9,6 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
       <SEO
         title={seoText.title}
         description={seoText.description}
