@@ -38,3 +38,8 @@ next-env.d.ts
 # pwa files
 sw.js
 public/sw.js
+
+# package manager
+yarn-error.log
+yarn.lock
+package-lock.json
