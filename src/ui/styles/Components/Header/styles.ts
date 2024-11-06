@@ -42,16 +42,7 @@ export const RightGroup = styled.div`
   gap: 1.25rem;
 `;
 
-export const MenuWrappe = styled.div`
-  margin-left: 2.125rem;
-  cursor: pointer;
-`;
-
-export const Iconprofile = styled(Image)`
-  margin-right: 1.188rem;
-  cursor: pointer;
-`;
-
-export const ImageNotification = styled(Image)`
+export const Icons = styled.div`
+  background-color: yellow;
   cursor: pointer;
 `;
