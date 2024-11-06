@@ -44,5 +44,5 @@ export const RightGroup = styled.div`
 `;
 
 export const Icons = styled.div`
-  cursor: pointer;s
+  cursor: pointer;
 `;
