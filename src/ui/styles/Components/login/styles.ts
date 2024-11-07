@@ -7,18 +7,16 @@ export const LoginContainer = styled.div`
     flex-direction: row;
     width: 100vw;
     height: 100vh;
+    gap: 1rem;
     background-color: ${({theme}) => theme.colors.backgrounds.quaternary};
 `;
 
 
 export const LeftColumn = styled.div`
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5.438rem; 
-    text-align: center;
+    width: 40%;
+
 
     p {
         font-size: ${({theme}) => theme.sizes.font.primary}; 
@@ -30,24 +28,25 @@ export const LeftColumn = styled.div`
 `;
 
 export const BackgroundImageContainer = styled.div`
-    width: 100%;
+    /* width: 50%;
     height: 100%; 
     object-fit: cover; 
-    object-position: center;  
+    object-position: center;  */
 `;
 
 
 export const RightColumn = styled.div`
-    flex: 2;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 60%;
     background-color: ${({theme}) => theme.colors.backgrounds.sextinary};
-    border-radius: 10.625rem 0 0 9.375rem; 
-`;
-
+    border-radius: 10.625rem 0 0 9.375rem;
+    `;
+    
 export const FormContainer = styled.div`
-    text-align: center;
+    /* text-align: center; */
 `;
 
 export const Title = styled.h2`
@@ -59,9 +58,9 @@ export const Title = styled.h2`
 export const Divider = styled.div`
     color: ${({theme}) => theme.colors.text.primary};
     font-size: ${({theme}) => theme.sizes.font.quaternary}; 
-    font-weight: 400;
+    /* font-weight: 400;
     padding-top: 6.25rem; 
-    padding-bottom: 2.8125rem;
+    padding-bottom: 2.8125rem; */
 `;
 
 
@@ -73,8 +72,8 @@ export const Input = styled.input`
     border-bottom: 1px solid ${({theme}) => theme.colors.border.colors.tertiary};
     font-size: 0.75rem; 
     background-color: ${({theme}) => theme.colors.backgrounds.sextinary};
-    color: #00000080;
-    outline: none; 
+    /* color: #00000080;
+    outline: none;  */
 `;
 
 
@@ -82,10 +81,10 @@ export const StyledLink = styled.a`
     color: #00000080;
     font-size: 0.6875rem;
     text-align: end;
-    margin-top: 0;
-    display: block;
+    /* margin-top: 0; */
+    /* display: block; */
     text-decoration: none;
-    padding-bottom: 3.625rem; 
+    /* padding-bottom: 3.625rem;  */
     &:hover {
         color: #333;
         text-decoration: underline;
@@ -95,11 +94,11 @@ export const StyledLink = styled.a`
 export const StyledLink1 = styled.a`
     color: ${({theme}) => theme.colors.text.primary};
     font-size: 0.6875rem; 
-    text-align: center;
+    /* text-align: center;
     margin-top: 1.8125rem; 
-    display: block;
+    display: flex;
     text-decoration: none;
-    padding-top: 1.8125rem; 
+    padding-top: 1.8125rem;  */
     &:hover {
         color: #333;
         text-decoration: underline;
@@ -109,14 +108,15 @@ export const StyledLink1 = styled.a`
 
 export const FooterText = styled.p`
     display: flex;
-    font-family: "Magra", sans-serif;
+    flex-direction: column;
+    /* font-family: "Magra", sans-serif;
     font-size: 0.6875rem; 
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: normal; */
     color: ${({theme}) => theme.colors.text.primary};
-    text-align: center;
-    justify-content: center;
-    padding-top: 0.3125rem; 
+    text-align: end;
+    justify-content: flex-end;
+    background-color: yellow;
 `;
 

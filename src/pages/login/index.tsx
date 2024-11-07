@@ -1,4 +1,7 @@
-import React from "react";
+"use cliente"
+
+import React, { useState } from "react";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Image from "next/image";
 import {
   LoginContainer,
@@ -16,37 +19,61 @@ import {
 import { Button } from "@/components/Button";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
+import { auth } from "@/services/firebaseConfig";
 
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  function handleSignIn( ){
+    signInWithEmailAndPassword(email, password);
+  }
+
+  if(loading){
+    return <p>Carregando...</p>
+  }
+
+  if(user){
+    return console.log(user);
+  }
+
   return (
     <LoginContainer>
       <LeftColumn>
         <Image alt="logo" src={logo} />
         <p>
-          Descrição Descrição Descrição Descrição Descrição Descrição Descrição
-          Descrição
+          Macosts
         </p>
         <BackgroundImageContainer>
           <Image alt="gato" src={bgpingo} />
         </BackgroundImageContainer>
       </LeftColumn>
       <RightColumn>
-        <FormContainer>
           <Title>Entre na sua conta</Title>
           <Divider>OU</Divider>
-          <Input type="email" placeholder="E-mail" />
-          <Input type="password" placeholder="Senha" />
+        <FormContainer>
+          <Input type="email" placeholder="E-mail" onChange={(e) => setEmail(e.target.value)}/>
+
+          <Input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)}/>
           <StyledLink href="#">Esqueceu a senha?</StyledLink>
           <Button
             text="ENTRAR"
             variant="primary"
-            onClick={() => console.log("teste")}
+            onClick={handleSignIn}
           />
-          <StyledLink1 href="#">Não possui conta? Registre-se</StyledLink1>
-          <FooterText>
-            Ao entrar, você concorda com todos os termos e condições de uso.
-          </FooterText>
         </FormContainer>
+        <FooterText>
+          <p>
+            <StyledLink1 href="/register">Não possui conta? Registre-se</StyledLink1>
+          </p>
+          <p>Ao entrar, você concorda com todos os termos e condições de uso.</p>
+        </FooterText>
       </RightColumn>
     </LoginContainer>
   );
