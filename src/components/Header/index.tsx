@@ -1,64 +1,50 @@
 import React, { useState } from "react";
 import {
   HeaderContainer,
+  Icons,
   LeftGroup,
   RightGroup,
   StyledInput,
-  MenuWrappe,
-  Iconprofile,
-  ImageNotification,
 } from "@/ui/styles/Components/Header/styles";
 import logo from "@/ui/assets/images/Logo 50x50.svg";
-import menu from "@/ui/assets/images/menu.svg";
 import Image from "next/image";
-import imgnotification from "@/ui/assets/icons/Notoficstion icon.svg";
-import iconprofile from "@/ui/assets/icons/Vector.svg";
 import { Navbar } from "../Navbar";
+import NotificationIcon from "@/ui/assets/icons/Notification";
+import ProfileIcon from "@/ui/assets/icons/Profile";
+import MenuIcon from "@/ui/assets/icons/menu";
+import { useRouter } from "next/router";
 
 export function Header() {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [isProfileVisible, setProfileVisible] = useState(false);
   const [isNotificationVisible, setNotificationVisible] = useState(false);
-
-  const toggleNavbar = () => {
-    setNavbarVisible(!isNavbarVisible);
-  };
-
-  const viewprofile = () => {
-    setProfileVisible(!isProfileVisible);
-  };
-
-  const viewisNotification = () => {
-    setNotificationVisible(!isNotificationVisible);
-  };
+  const router = useRouter();
 
   return (
     <>
       <HeaderContainer>
         <LeftGroup>
-          <MenuWrappe onClick={toggleNavbar}>
-            <Image src={menu} alt="Menu" />
-          </MenuWrappe>
-          <Image alt="logo" src={logo} />
+          <Icons onClick={() => setNavbarVisible(!isNavbarVisible)}>
+            <MenuIcon />
+          </Icons>
+
+          <Image alt="logo" src={logo} onClick={() => router.push("/")} />
         </LeftGroup>
 
         <StyledInput type="text" name="search" />
 
         <RightGroup>
-          <ImageNotification
-            onClick={viewisNotification}
-            alt="notification"
-            src={imgnotification}
-          />
-          <Iconprofile
-            onClick={viewprofile}
-            alt="Iconprofile"
-            src={iconprofile}
-          />
+          <Icons onClick={() => setNotificationVisible(!isNotificationVisible)}>
+            <NotificationIcon />
+          </Icons>
+
+          <Icons onClick={() => setProfileVisible(!isProfileVisible)}>
+            <ProfileIcon />
+          </Icons>
         </RightGroup>
       </HeaderContainer>
 
-      <Navbar isVisible={isNavbarVisible} />
+      <Navbar $isVisible={isNavbarVisible} />
     </>
   );
 }

@@ -21,10 +21,11 @@ export const IconSearch = styled(Image)`
 
 export const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.backgrounds.primary};
-  max-width: 109%;
+  width: 100%;
   height: 4.75rem;
   display: flex;
   justify-content: space-between;
+  padding: 0 2rem;
   align-items: center;
 `;
 
@@ -33,7 +34,6 @@ export const LeftGroup = styled.div`
   align-items: center;
   justify-content: center;
   gap: 3.25rem;
-  
 `;
 
 export const RightGroup = styled.div`
@@ -43,16 +43,6 @@ export const RightGroup = styled.div`
   gap: 1.25rem;
 `;
 
-export const MenuWrappe = styled.div`  
-  margin-left: 2.125rem;
-  cursor: pointer;
-`;
-
-export const Iconprofile = styled(Image)`
-  margin-right: 1.188rem;
-  cursor: pointer;
-`;
-
-export const ImageNotification = styled(Image)`
-  cursor: pointer;
+export const Icons = styled.div`
+  cursor: pointer;s
 `;
