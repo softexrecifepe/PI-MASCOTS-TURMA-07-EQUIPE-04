@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.nav<{ $isVisible: boolean }>`
   width: 17rem;
-  height: 100vh;
+  height: calc(100vh - 4.75rem);
   background-color: ${({ theme }) => theme.colors.backgrounds.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 3rem;
   gap: 1rem;
+  position: absolute;
 
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   transform: ${({ $isVisible }) =>

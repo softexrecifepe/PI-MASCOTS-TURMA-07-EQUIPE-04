@@ -1,8 +1,7 @@
 import React from "react";
 import SEO from "@/components/SEO";
 import { HomePageTextsSEO } from "@/components/SEO/seoTexts";
-import { Button } from "@/components/Button";
-import { Header } from "@/components/Header";
+import { Card } from "@/components/Card";
 
 export default function Home() {
   return (
@@ -15,6 +14,7 @@ export default function Home() {
         url={HomePageTextsSEO.url}
         image={HomePageTextsSEO.image}
       />
+      <Card />
     </div>
   );
 }
