@@ -4,7 +4,7 @@ import React from "react";
 interface CardProps {
   children?: React.ReactNode;
   image: string;
-  name?: string;
+  animalName?: string;
   date?: string;
   hour?: string;
   description?: string;
@@ -13,7 +13,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   children,
   image,
-  name,
+  animalName,
   date,
   hour,
   description,
@@ -21,8 +21,8 @@ export const Card: React.FC<CardProps> = ({
   return (
     <Container>
       <div>
-        <AnimalImage src={image} alt={name ? name : "Animal"} />
-        <div>nome do animal: {name}</div>
+        <AnimalImage src={image} alt={animalName ? animalName : "Animal"} />
+        <div>nome do animal: {animalName}</div>
       </div>
 
       <div>
