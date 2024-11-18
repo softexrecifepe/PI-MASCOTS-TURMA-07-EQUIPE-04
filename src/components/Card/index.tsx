@@ -12,6 +12,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({
   children,
+  image,
   name,
   date,
   hour,
