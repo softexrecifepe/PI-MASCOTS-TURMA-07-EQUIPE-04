@@ -13,7 +13,7 @@ import {
   BackgroundImageContainer,
   StyledLink1,
 } from "@/ui/styles/Components/login/styles";
-import { Button } from "@/components/Button";
+import { Button } from "@/components/Elements/Buttons";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
 
@@ -37,11 +37,11 @@ export default function Login() {
           <Input type="email" placeholder="E-mail" />
           <Input type="password" placeholder="Senha" />
           <StyledLink href="#">Esqueceu a senha?</StyledLink>
-          <Button
+          {/* <Button
             text="ENTRAR"
             variant="primary"
             onClick={() => console.log("teste")}
-          />
+          /> */}
           <StyledLink1 href="#">Não possui conta? Registre-se</StyledLink1>
           <FooterText>
             Ao entrar, você concorda com todos os termos e condições de uso.
