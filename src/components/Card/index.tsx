@@ -1,4 +1,10 @@
-import { AnimalImage, Container } from "@/ui/styles/Components/Card/styles";
+import {
+  ImageWrapper,
+  Container,
+  Header,
+  DateTimeGroup,
+} from "@/ui/styles/Components/Card/styles";
+import Image from "next/image";
 import React from "react";
 
 interface CardProps {
@@ -20,15 +26,23 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <Container>
-      <div>
-        <AnimalImage src={image} alt={animalName ? animalName : "Animal"} />
-        <div>nome do animal: {animalName}</div>
-      </div>
+      <Header>
+        <ImageWrapper>
+          <Image
+            src={image}
+            alt={animalName || "Animal"}
+            layout="fill"
+            objectFit="cover"
+          />
+        </ImageWrapper>
+        <div>{animalName}</div>
+      </Header>
 
-      <div>
+      <DateTimeGroup>
         <div>Data: {date}</div>
         <div>horário: {hour}</div>
-      </div>
+      </DateTimeGroup>
+
       <div>descrição: {description}</div>
 
       <button>Editar</button>
