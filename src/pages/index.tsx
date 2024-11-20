@@ -16,17 +16,17 @@ export default function Home() {
         url={HomePageTextsSEO.url}
         image={HomePageTextsSEO.image}
       />
+
       {cardItems.map((card) => (
         <Card
           key={card.id}
-          image={card.imageUrl ? card.imageUrl : imgExample}
+          image={card.imageUrl || imgExample.src}
           animalName={card.animalName}
           date={card.date}
           hour={card.hour}
           description={card.description}
         />
       ))}
-      <Card image={imgExample} />
     </div>
   );
 }
