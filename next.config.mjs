@@ -16,7 +16,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: [""],
+    domains: ["bestfriends.org"],
   },
 };
 

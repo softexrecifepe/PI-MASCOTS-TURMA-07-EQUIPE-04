@@ -10,7 +10,7 @@ interface CardItem {
 const cardItems: CardItem[] = [
   {
     id: 1,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "",
     animalName: "Pingo",
     date: new Date().toLocaleDateString("pt-BR"),
     hour: new Date().toLocaleTimeString("pt-BR", {
@@ -21,7 +21,8 @@ const cardItems: CardItem[] = [
   },
   {
     id: 2,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://bestfriends.org/sites/default/files/styles/image_mobile_square/public/image/WaffleLove1384sak_1.jpg?h=ebb7fe6c&itok=LPFwsJ-A",
     animalName: "Luna",
     date: "20/11/2024",
     hour: "10:00",
@@ -29,7 +30,7 @@ const cardItems: CardItem[] = [
   },
   {
     id: 3,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "",
     animalName: "Max",
     date: "22/11/2024",
     hour: "15:30",
@@ -37,7 +38,7 @@ const cardItems: CardItem[] = [
   },
   {
     id: 4,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "",
     animalName: "Bella",
     date: "25/11/2024",
     hour: "09:45",
@@ -45,7 +46,7 @@ const cardItems: CardItem[] = [
   },
   {
     id: 5,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "",
     animalName: "Thor",
     date: "27/11/2024",
     hour: "13:00",
@@ -53,7 +54,7 @@ const cardItems: CardItem[] = [
   },
   {
     id: 6,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "",
     animalName: "Mel",
     date: "28/11/2024",
     hour: "16:15",
@@ -61,7 +62,7 @@ const cardItems: CardItem[] = [
   },
   {
     id: 7,
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "",
     animalName: "Rocky",
     date: "30/11/2024",
     hour: "08:30",
