@@ -3,18 +3,14 @@ import { PrimaryButton, SecondaryButton } from "@/ui/styles/Components/Button/st
 
 
 interface ButtonProps {
-    text: string;
-    variant?: "primary" | "secondary";
+    text: string
     onClick?: () => void;
 };
-export function Button({ text, variant = "primary", onClick }: ButtonProps) {
+export function Button({ text, onClick }: ButtonProps) {
     return (
         <>
-            {variant === "primary" ? (
-                <PrimaryButton onClick={onClick}>{text}</PrimaryButton>
-            ) : (
-                <SecondaryButton onClick={onClick}>{text}</SecondaryButton>
-            )}
+            <PrimaryButton onClick={onClick}>{text}</PrimaryButton>
+            <SecondaryButton onClick={onClick}>{text}</SecondaryButton>
         </>
     );
 };

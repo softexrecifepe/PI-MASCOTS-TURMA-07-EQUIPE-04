@@ -20,6 +20,7 @@ import { Button } from "@/components/Button";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
 import { auth } from "@/services/firebaseConfig";
+import { PrimaryButton } from "@/ui/styles/Components/Button/styles";
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -62,11 +63,7 @@ export default function Login() {
 
           <Input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)}/>
           <StyledLink href="#">Esqueceu a senha?</StyledLink>
-          <Button
-            text="ENTRAR"
-            variant="primary"
-            onClick={handleSignIn}
-          />
+          <PrimaryButton onClick={handleSignIn}>ENTRAR</PrimaryButton>
         </FormContainer>
         <FooterText>
           <p>
