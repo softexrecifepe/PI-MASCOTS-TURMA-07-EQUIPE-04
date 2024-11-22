@@ -11,7 +11,6 @@ const nextPWA = withPWA({
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compiler: {
     styledComponents: true,
   },
