@@ -43,7 +43,7 @@ export default function Login() {
 
   if (user) {
     console.log(user);
-    return <p>Bem-vindo, {user.email}!</p>;
+    return <p>Bem-vindo, {user.user.displayName}!</p>;
   }
 
   return (
