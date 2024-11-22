@@ -2,7 +2,7 @@ import React from "react";
 import {
   PrimaryButtonStyle,
   SecondaryButtonStyle,
-} from "@/ui/styles/Components/Button/styles";
+} from "@/ui/styles/Components/Elements/Buttons/styles";
 
 interface ButtonProps {
   children: string;
