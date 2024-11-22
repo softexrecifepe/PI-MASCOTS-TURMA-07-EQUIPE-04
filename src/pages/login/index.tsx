@@ -1,5 +1,3 @@
-"use cliente";
-
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Image from "next/image";
