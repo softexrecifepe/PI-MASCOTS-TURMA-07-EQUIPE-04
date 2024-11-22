@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Image from "next/image";
 import {
@@ -25,25 +25,34 @@ export default function Login() {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   function handleSignIn() {
     signInWithEmailAndPassword(email, password);
   }
 
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
+  if (!isMounted) return null;
+
+  if (loading) return <p>Carregando...</p>;
+
+  if (error) return <p>Erro ao entrar: {error.message}</p>;
 
   if (user) {
-    return console.log(user);
+    console.log(user);
+    return <p>Bem-vindo, {user.email}!</p>;
   }
 
   return (
     <LoginContainer>
       <LeftColumn>
-        <Image alt="logo" src={logo} />
+        <Image alt="logo" src={logo} width={150} height={50} />
         <p>Macosts</p>
         <BackgroundImageContainer>
-          <Image alt="gato" src={bgpingo} />
+          <Image alt="gato" src={bgpingo} style={{ objectFit: "cover" }} />
         </BackgroundImageContainer>
       </LeftColumn>
       <RightColumn>
@@ -55,7 +64,6 @@ export default function Login() {
             placeholder="E-mail"
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <Input
             type="password"
             placeholder="Senha"
