@@ -14,7 +14,6 @@ export const Navbar: React.FC<NavbarProps> = ({ $isVisible }) => {
   return (
     <Container $isVisible={$isVisible}>
       {itens.map((item) => (
-        // <Itens key={item.id} onClick={() => handleNavigation(item.path)}>
         <Itens key={item.id} onClick={handleNavigation(item.path)}>
           <div>{item.icon}</div>
           <div>{item.title}</div>

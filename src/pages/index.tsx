@@ -1,8 +1,9 @@
 import React from "react";
 import SEO from "@/components/SEO";
 import { HomePageTextsSEO } from "@/components/SEO/seoTexts";
-import { Button } from "@/components/Button";
-import { Header } from "@/components/Header";
+import { Card } from "@/components/Card";
+import imgExample from "@/ui/assets/images/Logo.svg";
+import cardItems from "@/service/mocks/cardItens";
 
 export default function Home() {
   return (
@@ -15,6 +16,17 @@ export default function Home() {
         url={HomePageTextsSEO.url}
         image={HomePageTextsSEO.image}
       />
+
+      {cardItems.map((card) => (
+        <Card
+          key={card.id}
+          image={card.imageUrl || imgExample.src}
+          animalName={card.animalName}
+          date={card.date}
+          hour={card.hour}
+          description={card.description}
+        />
+      ))}
     </div>
   );
 }
