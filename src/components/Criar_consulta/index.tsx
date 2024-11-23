@@ -1,5 +1,13 @@
 import React from "react";
 
+interface vetconsultation{
+    tutorName: string;
+    animalName: string;
+    animalAge: number;
+    consultation: string;
+    priority: string;
+    documents: FileList | null;
+};
 
 export function Vetconsultation(){
     return(
