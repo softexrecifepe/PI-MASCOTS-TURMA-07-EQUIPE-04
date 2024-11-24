@@ -1,60 +1,57 @@
-Clínica Veterinária
-Este projeto tem como objetivo fornecer uma plataforma para gerenciar consultas, pacientes e informações gerais de uma clínica veterinária. Ele foi desenvolvido utilizando as seguintes tecnologias:
+Clínica Veterinária - Plataforma de Gerenciamento
+Bem-vindo ao projeto de uma plataforma desenvolvida para gerenciar consultas, pacientes e informações gerais de uma clínica veterinária.
 
-React
-Next.js
-Styled Components
+Descrição
+Este projeto foi criado com o objetivo de facilitar a administração de clínicas veterinárias, oferecendo ferramentas para organizar atendimentos, manter registros médicos e agendar consultas. A interface intuitiva e responsiva garante uma experiência eficiente tanto para profissionais quanto para clientes.
 
 Tecnologias Utilizadas
-
-React: Biblioteca JavaScript para construção de interfaces de usuário.
-Next.js: Framework React para renderização do lado do servidor e geração de sites estáticos.
-Styled Components: Biblioteca para estilização de componentes utilizando CSS-in-JS.
+React: Biblioteca JavaScript para criação de interfaces de usuário dinâmicas e responsivas.
+Next.js: Framework baseado em React que permite renderização no lado do servidor e geração de sites estáticos.
+Styled Components: Biblioteca para estilização de componentes com suporte a CSS-in-JS, permitindo design modular e reutilizável.
 Funcionalidades
-Cadastro de Pacientes: Cadastro e gerenciamento de informações dos pacientes da clínica veterinária.
-Agendamento de Consultas: Agende consultas e gerencie horários.
-Gerenciamento de Prontuários: Acompanhe o histórico médico dos pacientes, incluindo tratamentos e medicações.
-Notificações e Lembretes: Notifique os donos dos animais sobre consultas agendadas, vacinas e outros cuidados.
+Cadastro de Pacientes: Registro completo de animais e informações de seus tutores.
+Agendamento de Consultas: Sistema de marcação integrado com o calendário dos profissionais.
+Gerenciamento de Prontuários: Histórico médico detalhado dos pacientes, com informações de vacinas, tratamentos e diagnósticos.
+Notificações e Lembretes: Alertas automatizados para consultas futuras ou medicações pendentes.
 Como Executar o Projeto
-1. Clone o Repositório:
-Para começar, clone o repositório para o seu computador local:
+Siga os passos abaixo para executar o projeto localmente:
+
+Clone o Repositório
 
 bash
 Copiar código
 git clone https://github.com/seu-usuario/seu-repositorio.git
-2. Instale as Dependências:
-Após clonar o repositório, navegue até o diretório do projeto e instale as dependências necessárias:
+Acesse o Diretório do Projeto
 
 bash
 Copiar código
 cd seu-repositorio
+Instale as Dependências
+
+bash
+Copiar código
 npm install
-3. Execute o Projeto:
-Com as dependências instaladas, inicie o servidor de desenvolvimento:
+Execute o Servidor de Desenvolvimento
 
 bash
 Copiar código
 npm run dev
-Abra o navegador e acesse http://localhost:3000 para visualizar o projeto em funcionamento.
+Acesse a Aplicação
+Abra o navegador e vá para:
+http://localhost:3000
 
-Estrutura do Projeto
-O projeto está estruturado da seguinte forma:
-
-/pages: Contém as páginas da aplicação (ex.: consulta, pacientes, etc.).
-/components: Componentes reutilizáveis, como botões, formulários, etc.
-/styles: Estilos globais e específicos, definidos usando Styled Components.
 Contribuição
-Contribuições são bem-vindas! Se você deseja contribuir com melhorias ou correções:
+Contribuições são bem-vindas! Caso tenha sugestões, encontre problemas ou queira adicionar novas funcionalidades, sinta-se à vontade para:
 
-Faça um fork deste repositório.
-Crie uma branch para a sua feature (git checkout -b minha-feature).
-Faça commit das suas alterações (git commit -am 'Adiciona nova feature').
-Envie para a branch principal (git push origin minha-feature).
-Abra um Pull Request explicando suas alterações.
+Abrir uma Issue: Relate problemas ou peça melhorias.
+Enviar Pull Requests: Participe ativamente no desenvolvimento.
+Confira as orientações no arquivo CONTRIBUTING.md (se disponível).
+
 Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
 
-Sugestões de Melhoria:
-Adicionar um Link de Demo: Caso tenha um ambiente de demo online, adicione o link para visualização do projeto.
-Instruções de Testes: Caso haja testes automatizados, adicione uma seção explicando como executá-los.
-Explicação das Rotas da API: Caso o projeto envolva back-end, adicione informações sobre como utilizar a API, seus endpoints e o que esperar como resposta.
+Melhorias Futuras
+Implementação de autenticação e controle de acesso por níveis (administrador, veterinário e cliente).
+Integração com APIs de pagamento para consultas e procedimentos.
+Painel de controle administrativo com visualização de relatórios.
+Suporte a múltiplas línguas para atender a uma base de usuários global.
