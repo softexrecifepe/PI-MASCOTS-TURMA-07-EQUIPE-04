@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Button, Container, Form, Heading, Input, Label, Select} from "@/ui/styles/Components/Criar_consulta/styles";
 import { db, collection, addDoc } from "@/services/firebaseConfig";
 
 type Vetconsultation = {
@@ -50,45 +51,47 @@ export function Vetconsultation(){
     
     return(
         <>
-        <h2>Criar Consulta</h2>
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="tutor-name">Nome do tutor: </label>
-                <input type="text" id="tutor-name" name="tutorName" value={formData.tutorName} onChange={handleChange} placeholder="digite o nome do tutor"/>
-            </div>
-            <div>
-                <label htmlFor="animal-name">Nome do animal:</label>
-                <input type="text" id="animal-name" name="animalName" value={formData.animalName} onChange={handleChange}placeholder="digite o nome do animal"/>
-            </div>
-            <div>
-                <label htmlFor="animal-age">Idade (Animal):</label>
-                <input type="number" id="animal-age" name="animalAge" value={formData.animalAge} onChange={handleChange} placeholder="digite a idade do animal"/>
-            </div>
-            <div>
-                <label htmlFor="consultation">Consulta Desejada:</label>
-                <select name="consultation" id="consultation" value={formData.consultation} onChange={handleChange}>
-                    <option value="checkup">Check-up</option>
-                    <option value="vaccination">Vacinação</option>
-                    <option value="surgery">Cirurgia</option>
-                    <option value="routine">Rotina</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="priority">Prioridade:</label>
-                <select id="priority" name="priority" value={formData.priority} onChange={handleChange}>
-                    <option value="low">Baixa</option>
-                    <option value="medium">Média</option>
-                    <option value="high">Alta</option>
-                </select>
-            </div>
-            {/* <div>
-                <label htmlFor="documents">Documentos Complementares:</label>
-                <input type="file" id="documents" name="documents" multiple  value={formData.documents} onChange={handleChange}/>
-            </div> */}
-            <div>
-                <button type="submit">Agendar Consulta</button>
-            </div>
-        </form>
+            <Container>
+                <Heading>Criar Consulta</Heading>
+                <Form onSubmit={handleSubmit}>
+                    <div>
+                        <Label htmlFor="tutor-name">Nome do tutor: </Label>
+                        <Input type="text" id="tutor-name" name="tutorName" value={formData.tutorName} onChange={handleChange} placeholder="digite o nome do tutor"/>
+                    </div>
+                    <div>
+                        <Label htmlFor="animal-name">Nome do animal:</Label>
+                        <Input type="text" id="animal-name" name="animalName" value={formData.animalName} onChange={handleChange}placeholder="digite o nome do animal"/>
+                    </div>
+                    <div>
+                        <Label htmlFor="animal-age">Idade (Animal):</Label>
+                        <Input type="number" id="animal-age" name="animalAge" value={formData.animalAge} onChange={handleChange} placeholder="digite a idade do animal"/>
+                    </div>
+                    <div>
+                        <Label htmlFor="consultation">Consulta Desejada:</Label>
+                        <Select name="consultation" id="consultation" value={formData.consultation} onChange={handleChange}>
+                            <option value="checkup">Check-up</option>
+                            <option value="vaccination">Vacinação</option>
+                            <option value="surgery">Cirurgia</option>
+                            <option value="routine">Rotina</option>
+                        </Select>
+                    </div>
+                    <div>
+                        <Label htmlFor="priority">Prioridade:</Label>
+                        <Select id="priority" name="priority" value={formData.priority} onChange={handleChange}>
+                            <option value="low">Baixa</option>
+                            <option value="medium">Média</option>
+                            <option value="high">Alta</option>
+                        </Select>
+                    </div>
+                    {/* <div>
+                        <Label htmlFor="documents">Documentos Complementares:</Label>
+                        <Input type="file" id="documents" name="documents" multiple  value={formData.documents} onChange={handleChange}/>
+                    </div> */}
+                    <div>
+                        <Button type="submit">Agendar Consulta</Button>
+                    </div>
+                </Form>
+            </Container>
         </>
     );
 }
