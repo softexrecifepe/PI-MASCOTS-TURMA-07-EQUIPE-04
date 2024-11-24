@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Container, Form, FormGroup, Heading, Input, Label, Select} from "@/ui/styles/Components/Criar_consulta/styles";
-import { db, collection, addDoc } from "@/services/firebaseConfig";
+import React, { useEffect, useState } from "react";
+import { Container, Form, FormGroup, Heading, Input, Label, Select } from "@/ui/styles/Components/Criar_consulta/styles";
 import { SecondaryButtonStyle } from "@/ui/styles/Components/Elements/Buttons/styles";
 
 type Vetconsultation = {
@@ -11,10 +10,7 @@ type Vetconsultation = {
     priority: string;
 };
 
-
-
-export function Vetconsultation(){
-
+export function Vetconsultation() {
     const [formData, setFormData] = useState<Vetconsultation>({
         tutorName: "",
         animalName: "",
@@ -30,25 +26,61 @@ export function Vetconsultation(){
             [name]: value,
         }));
     };
-    
-    const handleSubmit = async (e: React.FormEvent) => {
+
+    const setCookie = (name: string, value: string, days: number) => {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // Define o tempo de expiração
+        document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()};path=/`;
+    };
+
+    const getCookie = (name: string): string | null => {
+        const cookies = document.cookie.split("; ");
+        for (let cookie of cookies) {
+            const [key, value] = cookie.split("=");
+            if (key === name) return decodeURIComponent(value);
+        }
+        return null;
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-    
+
         try {
-          // Envia os dados para o Firestore
-            const docRef = await addDoc(collection(db, "consultations"), {
-                tutorName: formData.tutorName,
-                animalName: formData.animalName,
-                animalAge: formData.animalAge,
-                consultation: formData.consultation,
-                priority: formData.priority,
+            // Recupera o valor atual do cookie, se houver
+            const existingData = getCookie("vetConsultations");
+            let consultations = existingData ? JSON.parse(existingData) : [];
+
+            // Adiciona os dados atuais ao array de consultas
+            consultations.push(formData);
+
+            // Salva o array de consultas no cookie (convertido para string)
+            setCookie("vetConsultations", JSON.stringify(consultations), 7);
+
+            alert("Consulta salva com sucesso!");
+
+            // Limpa o formulário
+            setFormData({
+                tutorName: "",
+                animalName: "",
+                animalAge: 0,
+                consultation: "checkup",
+                priority: "low",
             });
-            alert("Consulta agendada com sucesso!");
-        } catch (e) {
-            console.error("Erro ao adicionar consulta: ", e);
-            alert("Erro ao agendar consulta.");
-            }
-        };
+        } catch (error) {
+            console.error("Erro ao salvar consulta nos Cookies: ", error);
+            alert("Erro ao salvar consulta.");
+        }
+    };
+
+    // Exibe as consultas diretamente no console ao carregar o componente
+    useEffect(() => {
+        const consultations = getCookie("vetConsultations");
+        if (consultations) {
+            console.log("Consultas Salvas:", JSON.parse(consultations));
+        } else {
+            console.log("Nenhuma consulta salva.");
+        }
+    }, []);
     
     return(
         <>
