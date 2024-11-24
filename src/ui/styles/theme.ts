@@ -19,6 +19,7 @@ const theme = {
       quaternary: "#ffffff",
       quinary: "#f5f5f5",
       sextinary: "#D9D9D9",
+      error: "#dc3545",
     },
     text: {
       primary: "#000000",

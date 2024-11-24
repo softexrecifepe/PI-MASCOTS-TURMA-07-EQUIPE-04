@@ -109,3 +109,13 @@ export const Select = styled.select`
 export const SecondaryButtonStyle = styled.button`
     /* text-transform: uppercase; */
 `
+export const Alert = styled.div<{ isError: boolean }>`
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;;
+    background-color: ${({ isError, theme }) => isError ? theme.colors.backgrounds.error : "#28a745"};
+    color: ${({theme}) => theme.colors.text.secondary};
+    font-size: ${({theme}) => theme.sizes.font.primary};
+    font-weight: 700;
+`;
