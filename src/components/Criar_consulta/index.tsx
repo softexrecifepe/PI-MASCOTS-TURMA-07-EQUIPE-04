@@ -127,7 +127,8 @@ export function Vetconsultation() {
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="consultation">Consulta Desejada:</Label>
-                    <Select name="consultation" id="consultation" value={formData.consultation} onChange={handleChange}>
+                    <Select name="consultation" id="consultation" value={formData.consultation} onChange={handleChange} required>
+                    <option value="" disabled hidden>Seleciona</option>
                         <option value="checkup">Check-up</option>
                         <option value="vaccination">Vacinação</option>
                         <option value="surgery">Cirurgia</option>
