@@ -30,7 +30,7 @@ export const Form = styled.form`
     background-color: ${({theme})=> theme.colors.backgrounds.quinary};
     border-radius: 1.25rem;
     padding: 2rem;
-    gap: 1rem;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: normal;
@@ -38,55 +38,62 @@ export const Form = styled.form`
 `
 export const FormGroup = styled.div`
     display: flex;
-    flex-direction: row; /* Define os itens na horizontal */
-    align-items: center; /* Alinha os itens verticalmente */
-    gap: 1rem; /* Espaço entre o label e o input */
-    margin-bottom: 1rem; /* Espaço entre os grupos */
+    height: auto;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 0px; 
+    width: 100%; 
+`;
+
+export const Label = styled.label`
+    white-space: nowrap; 
+    flex-shrink: 0; 
+    width: 9rem; 
+    color: ${({ theme }) => theme.colors.text.sextinary};
+    font-weight: 400;
+    font-size: ${({ theme }) => theme.sizes.font.primary};
+    margin-right: 0;
 `;
 
 
-
-export const Label = styled.label`
-    color: ${({theme}) => theme.colors.text.sextinary};
-    font-weight: 400;
-    font-size: ${({theme}) => theme.sizes.font.primary};
-
-`
-
 export const Input = styled.input`
-    width: 100%;
-    color: ${({theme}) => theme.colors.text.sextinary};
+    flex: 1; 
+    min-width: 15rem; 
+    max-width: 25rem; 
     font-weight: 400;
     font-size: ${({theme}) => theme.sizes.font.primary};
-    padding: 0.75rem 1rem; /* Espaçamento interno */
+    padding: 0.5rem 1rem;
     background-color: ${({ theme }) => theme.colors.backgrounds.quinary};
     border: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.border.colors.tertiary}; /* Define a borda */
-    border-radius: none; /* Borda arredondada */
-    outline: none; /* Remove o contorno padrão */
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border.colors.tertiary};
+    outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 0;
 
     &:focus {
-        border-bottom-color: ${({ theme }) => theme.colors.border.colors.tertiary}; /* Cor ao focar no campo */
-        box-shadow: 0 0 5px ${({ theme }) => theme.colors.border.colors.tertiary}; /* Sombra ao focar */
+        border-bottom-color: ${({ theme }) => theme.colors.border.colors.tertiary};
+        box-shadow: 0 0 5px ${({ theme }) => theme.colors.border.colors.tertiary};
     }
 
     &::placeholder {
-        color: ${({ theme }) => theme.colors.text.sextinary}; /* Cor do placeholder */
+        color: ${({ theme }) => theme.colors.text.sextinary};
     }
 `;
 
+
 export const Select = styled.select`
-    width: 100%;
+    flex: 1;
+    min-width: 15rem; 
+    max-width: 25rem; 
     color: ${({theme}) => theme.colors.text.sextinary};
     font-weight: 400;
     font-size: ${({theme}) => theme.sizes.font.primary};
-    padding: 0.75rem 1rem; /* Espaçamento interno */
+    padding: 0.5rem 1rem; 
     background-color: ${({ theme }) => theme.colors.backgrounds.quinary};
     border: none;
     border-bottom: 1px solid ${({ theme }) => theme.colors.border.colors.tertiary}; /* Define a borda */
-    border-radius: none; /* Borda arredondada */
-    outline: none; /* Remove o contorno padrão */
+    border-radius: none; 
+    outline: none; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     &:focus {

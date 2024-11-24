@@ -88,7 +88,7 @@ export function Vetconsultation(){
                         <Label htmlFor="documents">Documentos Complementares:</Label>
                         <Input type="file" id="documents" name="documents" multiple  value={formData.documents} onChange={handleChange}/>
                     </div> */}
-                        <SecondaryButtonStyle type="submit" onClick={handleSubmit}>Agendar Consulta</SecondaryButtonStyle>
+                    <SecondaryButtonStyle type="submit">Agendar Consulta</SecondaryButtonStyle>
 
                 </Form>
             </Container>
