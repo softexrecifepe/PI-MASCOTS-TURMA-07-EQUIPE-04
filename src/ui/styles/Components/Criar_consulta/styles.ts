@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 66.8125rem;
-    height: 22.8125rem;
+    width: 100vh;
+    max-width: 66.8125rem;
+    height: auto;
     justify-content: center;
     align-items: center;
     background-color: ${({theme})=> theme.colors.backgrounds.sextinary};
@@ -15,11 +16,15 @@ export const Container = styled.div`
 export const Heading = styled.h2`
     text-align: center;
     align-items: center;
-    background-color: red;
 
 `
 
 export const Form = styled.form`
+    border: 1px solid ${({theme}) => theme.colors.border.colors.primary};
+    background-color: ${({theme})=> theme.colors.backgrounds.quinary};
+    border-radius: 1.25rem;
+    padding: 2rem;
+    gap: 2rem;
 
 `
 

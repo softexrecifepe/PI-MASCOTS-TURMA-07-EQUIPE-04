@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.nav<{ $isVisible: boolean }>`
+export const LayoutContainer = styled.nav<{ $isVisible: boolean }>`
   width: 17rem;
   height: calc(100vh - 4rem); /* Ajuste para considerar a altura do Header */
   background-color: ${({ theme }) => theme.colors.backgrounds.primary};
