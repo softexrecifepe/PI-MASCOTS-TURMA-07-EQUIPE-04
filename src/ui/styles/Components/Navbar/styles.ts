@@ -9,7 +9,7 @@ export const LayoutContainer = styled.nav<{ $isVisible: boolean }>`
   align-items: center;
   padding-top: 3rem;
   gap: 1rem;
-  position: absolute;
+  position: fixed;
 
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   transform: ${({ $isVisible }) =>

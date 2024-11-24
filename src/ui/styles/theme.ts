@@ -26,7 +26,9 @@ const theme = {
       tertiary: "#1c1c1c",
       quaternary: "#b00000",
       quinary: "#77b042",
+      sextinary: "#44215d",
     },
+    
     border: {
       colors: {
         primary: "#77b042",
