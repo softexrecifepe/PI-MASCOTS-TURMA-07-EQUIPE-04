@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Image from "next/image";
 import {
   LoginContainer,
@@ -15,31 +16,43 @@ import {
 } from "@/ui/styles/Components/login/styles";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "@/services/firebaseConfig";
 import { PrimaryButton } from "@/components/Elements/Buttons";
 
-export default function Register() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
 
-  function handleSignOut() {
-    createUserWithEmailAndPassword(email, password);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  function handleSignIn() {
+    signInWithEmailAndPassword(email, password);
   }
 
-  if (loading) {
-    return <p>Carregando...</p>;
+  if (!isMounted) return null;
+
+  if (loading) return <p>Carregando...</p>;
+
+  if (error) return <p>Erro ao entrar: {error.message}</p>;
+
+  if (user) {
+    console.log(user);
+    return <p>Bem-vindo, {user.user.displayName}!</p>;
   }
 
   return (
     <LoginContainer>
       <LeftColumn>
-        <Image alt="logo" src={logo} />
+        <Image alt="logo" src={logo} width={150} height={50} />
         <p>Macosts</p>
         <BackgroundImageContainer>
-          <Image alt="gato" src={bgpingo} />
+          <Image alt="gato" src={bgpingo} style={{ objectFit: "cover" }} />
         </BackgroundImageContainer>
       </LeftColumn>
       <RightColumn>
@@ -51,14 +64,13 @@ export default function Register() {
             placeholder="E-mail"
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <Input
             type="password"
             placeholder="Senha"
             onChange={(e) => setPassword(e.target.value)}
           />
           <StyledLink href="#">Esqueceu a senha?</StyledLink>
-          <PrimaryButton onClick={handleSignOut}>Entrar</PrimaryButton>
+          <PrimaryButton onClick={handleSignIn}>ENTRAR</PrimaryButton>
         </FormContainer>
         <FooterText>
           <p>
