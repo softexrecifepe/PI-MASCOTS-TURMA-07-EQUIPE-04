@@ -12,6 +12,14 @@ const GlobalStyles = createGlobalStyle`
         background-color: #f5f5f5;
         color: #333;
     }
+    
+    button {
+        cursor: pointer;
+
+        :disabled {
+            cursor: not-allowed;
+        }
+    }
 
 `;
 
