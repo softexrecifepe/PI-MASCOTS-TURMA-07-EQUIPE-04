@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.nav<{ $isVisible: boolean }>`
+export const LayoutContainer = styled.nav<{ $isVisible: boolean }>`
   width: 17rem;
   height: calc(100vh - 4rem); /* Ajuste para considerar a altura do Header */
   background-color: ${({ theme }) => theme.colors.backgrounds.primary};
@@ -9,7 +9,7 @@ export const Container = styled.nav<{ $isVisible: boolean }>`
   align-items: center;
   padding-top: 3rem;
   gap: 1rem;
-  position: absolute;
+  position: fixed;
 
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   transform: ${({ $isVisible }) =>
