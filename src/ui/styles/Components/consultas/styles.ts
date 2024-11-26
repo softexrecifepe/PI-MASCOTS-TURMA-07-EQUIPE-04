@@ -17,3 +17,13 @@ export const MainContent = styled.main`
     gap: 1.625rem;
     padding: 1.625rem 0;
 `;
+
+export const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+`
+
+export const Lista = styled.p``
