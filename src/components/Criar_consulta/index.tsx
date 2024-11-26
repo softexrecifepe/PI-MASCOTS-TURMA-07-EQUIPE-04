@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Alert, Container, Form, FormGroup, Heading, Input, Label, Select } from "@/ui/styles/Components/Criar_consulta/styles";
 import { SecondaryButtonStyle } from "@/ui/styles/Components/Elements/Buttons/styles";
 
-type Vetconsultation = {
+
+type VetconsultationType = {
     tutorName: string;
     animalName: string;
     animalAge: number;
@@ -10,8 +11,12 @@ type Vetconsultation = {
     priority: string;
 };
 
-export function Vetconsultation() {
-    const [formData, setFormData] = useState<Vetconsultation>({
+interface VetconsultationProps {
+    onCancel: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    }
+
+export function Vetconsultation({onCancel}: VetconsultationProps) {
+    const [formData, setFormData] = useState<VetconsultationType>({
         tutorName: "",
         animalName: "",
         animalAge: 0,
@@ -20,6 +25,7 @@ export function Vetconsultation() {
     });
     const [alertMessage, setAlertMessage] = useState<string | null>(null);
     const [isError, setError] = useState<boolean>(false);
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -32,7 +38,6 @@ export function Vetconsultation() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Validação para garantir que todos os campos sejam preenchidos corretamente
         if (!formData.tutorName || !formData.animalName || formData.animalAge <= 0) {
             setAlertMessage("Todos os campos devem ser preenchidos corretamente!");
             setError(true);
@@ -41,20 +46,17 @@ export function Vetconsultation() {
         }
 
         try {
-            // Recupera os dados existentes no localStorage ou cria um array vazio
+
             const existingData = localStorage.getItem("vetConsultations");
             const consultations = existingData ? JSON.parse(existingData) : [];
 
-            // Adiciona a nova consulta
             consultations.push(formData);
 
-            // Salva no localStorage
             localStorage.setItem("vetConsultations", JSON.stringify(consultations));
 
             setAlertMessage("Consulta salva com sucesso!");
             setError(false);
 
-            // Limpa o formulário
             setFormData({
                 tutorName: "",
                 animalName: "",
@@ -63,8 +65,10 @@ export function Vetconsultation() {
                 priority: "low",
             });
 
-            // Limpa o alerta após 3 segundos
             setTimeout(() => setAlertMessage(null), 3000);
+
+            // setLoading(false);
+
         } catch (error) {
             console.error("Erro ao salvar consulta no localStorage:", error);
             setAlertMessage("Erro ao salvar consulta.");
@@ -72,7 +76,7 @@ export function Vetconsultation() {
         }
     };
 
-    // Exibe as consultas diretamente no console ao carregar o componente
+
     useEffect(() => {
         const storedData = localStorage.getItem("vetConsultations");
         if (storedData) {
@@ -82,10 +86,11 @@ export function Vetconsultation() {
         }
     }, []);
 
+
     return (
         <Container>
             <Heading>Criar Consulta</Heading>
-            <Form onSubmit={handleSubmit}>
+            <Form>
                 <FormGroup>
                     <Label htmlFor="tutor-name">Nome do tutor: </Label>
                     <Input
@@ -150,9 +155,12 @@ export function Vetconsultation() {
                         <option value="high">Alta</option>
                     </Select>
                 </FormGroup>
-                <SecondaryButtonStyle type="submit">
+                <SecondaryButtonStyle type="submit" onClick={handleSubmit}>
                     Agendar Consulta
                 </SecondaryButtonStyle>
+
+                <button type="button" onClick={onCancel}>Cancelar</button>
+            
             </Form>
             {alertMessage && <Alert isError={isError}>{alertMessage}</Alert>}{" "}
             {/* Exibe o alerta com o estilo adequado */}

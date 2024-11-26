@@ -30,27 +30,37 @@ export default function VetQueries() {
     const handleClick = () => {
       console.log("Criar consulta clicado!");
       setLoading(true);
-
-      // Adicione lógica para abrir o formulário ou criar uma consulta
     };
+
+    
+
+    const handleCancel = () =>{
+      setLoading(false);
+    }
 
   return (
     <div>
       <Header />
         <Title>Consultas</Title>
-        <SecondaryButtonStyle onClick={handleClick}>Criar Consulta</SecondaryButtonStyle>
-      <MainContent>
-        <Div>
-          {consultationsVet?.map((consultations, index) => (
-            <Lista key={index}>
-              <p>Nome do Tutor: {consultations.tutorName}</p>
-              <p>Nome do Animal: {consultations.animalName}</p>
-              <p></p>
-            </Lista>
-          ))}
-        </Div>
-      </MainContent>
-      {!setLoading && <Vetconsultation />}
+
+        {loading ? (
+          <Vetconsultation onCancel={handleCancel}/>
+        ): (
+          <div>
+            <SecondaryButtonStyle onClick={handleClick}>Criar Consulta</SecondaryButtonStyle>
+            <MainContent>
+              <Div>
+                {consultationsVet?.map((consultations, index) => (
+                  <Lista key={index}>
+                    <p>Nome do Tutor: {consultations.tutorName}</p>
+                    <p>Nome do Animal: {consultations.animalName}</p>
+                    <p></p>
+                  </Lista>
+                ))}
+              </Div>
+            </MainContent>
+          </div>
+        )}
     </div>
   );
 }
