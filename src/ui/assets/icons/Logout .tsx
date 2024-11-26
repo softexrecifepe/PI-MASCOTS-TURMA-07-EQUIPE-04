@@ -9,7 +9,7 @@ interface CustomIconProps {
 const LogoutIcon: React.FC<CustomIconProps> = ({
   width = 18,
   height = 18,
-  fill = "black",
+  fill = "white",
 }) => (
   <svg
     width={width}

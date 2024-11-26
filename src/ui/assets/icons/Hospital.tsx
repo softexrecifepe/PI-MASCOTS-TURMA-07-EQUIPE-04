@@ -11,7 +11,7 @@ const HospitalIcon: React.FC<CustomIconProps> = ({
   width = 22,
   height = 22,
   fill = "none",
-  stroke = "black",
+  stroke = "white",
 }) => (
   <svg
     width={width}
