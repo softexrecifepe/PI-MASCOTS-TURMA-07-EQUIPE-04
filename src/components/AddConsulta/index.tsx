@@ -80,7 +80,7 @@ export function Vetconsultation({ onCancel, onSubmitSuccess }: VetconsultationPr
 
       setTimeout(() => {
         setAlertMessage(null);
-        onSubmitSuccess(); // Chama a função de sucesso após salvar
+        onSubmitSuccess();
       }, 1500);
 
     } catch (error) {

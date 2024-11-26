@@ -49,7 +49,7 @@ export default function VetQueries() {
     setLoading(false);
     const storedData = localStorage.getItem("vetConsultations");
     if (storedData) {
-      setConsultationsvet(JSON.parse(storedData)); // Atualiza a lista de consultas
+      setConsultationsvet(JSON.parse(storedData));
     }
   };
 
