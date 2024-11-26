@@ -22,11 +22,10 @@ export const SecondaryButtonStyle = styled.button`
   color: ${({ theme }) => theme.colors.text.secondary};
   padding: 1rem;
   font-weight: 400;
-  font-size: ${({theme}) => theme.sizes.font.primary};
+  font-size: ${({ theme }) => theme.sizes.font.primary};
   text-align: center;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-
 `;

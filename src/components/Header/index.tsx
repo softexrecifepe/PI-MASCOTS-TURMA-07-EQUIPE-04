@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   HeaderContainer,
   Icons,
@@ -13,18 +13,25 @@ import NotificationIcon from "@/ui/assets/icons/Notification";
 import ProfileIcon from "@/ui/assets/icons/Profile";
 import MenuIcon from "@/ui/assets/icons/menu";
 import { useRouter } from "next/router";
+import { useHeader } from "@/contexts/HeaderContext";
 
 export function Header() {
-  const [isNavbarVisible, setNavbarVisible] = useState(false);
-  const [isProfileVisible, setProfileVisible] = useState(false);
-  const [isNotificationVisible, setNotificationVisible] = useState(false);
+  const {
+    isNavbarVisible,
+    toggleNavbar,
+    isProfileVisible,
+    toggleProfile,
+    isNotificationVisible,
+    toggleNotification,
+  } = useHeader();
+
   const router = useRouter();
 
   return (
     <>
       <HeaderContainer>
         <LeftGroup>
-          <Icons onClick={() => setNavbarVisible(!isNavbarVisible)}>
+          <Icons onClick={toggleNavbar}>
             <MenuIcon />
           </Icons>
 
@@ -34,11 +41,11 @@ export function Header() {
         <StyledInput type="text" name="search" />
 
         <RightGroup>
-          <Icons onClick={() => setNotificationVisible(!isNotificationVisible)}>
+          <Icons onClick={toggleNotification}>
             <NotificationIcon />
           </Icons>
 
-          <Icons onClick={() => setProfileVisible(!isProfileVisible)}>
+          <Icons onClick={toggleProfile}>
             <ProfileIcon />
           </Icons>
         </RightGroup>

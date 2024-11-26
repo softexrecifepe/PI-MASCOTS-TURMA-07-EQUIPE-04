@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Container } from "@/ui/styles/Pages/404/styles";
+import { PrimaryButtonStyle } from "@/ui/styles/Components/Elements/Buttons/styles";
 
 export default function Custom404() {
   const router = useRouter();
@@ -15,9 +16,9 @@ export default function Custom404() {
         <div>
           <h1>404</h1>
           <p>Esta página não foi encontrada</p>
-          <button onClick={() => router.push("/")}>
+          <PrimaryButtonStyle onClick={() => router.push("/")}>
             Ir para página inicial
-          </button>
+          </PrimaryButtonStyle>
         </div>
       </div>
     </Container>
