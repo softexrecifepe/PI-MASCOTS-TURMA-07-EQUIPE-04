@@ -9,6 +9,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ $isVisible }) => {
   const router = useRouter();
+
   const handleNavigation = (path: string) => () => router.push(path);
 
   return (
