@@ -12,6 +12,7 @@ import {
 
 import { SecundaryButton } from "@/components/Elements/Buttons";
 
+
 type Vetconsultation = {
   tutorName: string;
   animalName: string;
@@ -27,11 +28,13 @@ export default function VetQueries() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    const loadConsultations = () =>{
     const storedData = localStorage.getItem("vetConsultations");
     if (storedData) {
       setConsultationsvet(JSON.parse(storedData));
     }
-  }, []);
+  }; loadConsultations();
+  }, [loading]);
 
   const handleClick = () => {
     console.log("Criar consulta clicado!");
@@ -42,13 +45,21 @@ export default function VetQueries() {
     setLoading(false);
   };
 
+  const handleSubmitSuccess = () => {
+    setLoading(false);
+    const storedData = localStorage.getItem("vetConsultations");
+    if (storedData) {
+      setConsultationsvet(JSON.parse(storedData)); // Atualiza a lista de consultas
+    }
+  };
+
   return (
     <Container>
       {/* <Header /> */}
       <Title>Consultas</Title>
 
       {loading ? (
-        <Vetconsultation onCancel={handleCancel} />
+        <Vetconsultation onCancel={handleCancel} onSubmitSuccess={handleSubmitSuccess}/>
       ) : (
         <div>
           <SecundaryButton onClick={handleClick}>

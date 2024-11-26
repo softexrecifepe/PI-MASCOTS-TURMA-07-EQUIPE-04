@@ -21,6 +21,7 @@ type VetconsultationType = {
 
 interface VetconsultationProps {
   onCancel: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onSubmitSuccess?: () => void;
 }
 
 export function Vetconsultation({ onCancel }: VetconsultationProps) {
@@ -77,9 +78,12 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
         priority: "low",
       });
 
-      setTimeout(() => setAlertMessage(null), 3000);
+      setTimeout(() => {
+        setAlertMessage(null);
+        onSubmitSuccess(); // Chama a função de sucesso após salvar
+      }, 1500);
 
-      // setLoading(false);
+   
     } catch (error) {
       console.error("Erro ao salvar consulta no localStorage:", error);
       setAlertMessage("Erro ao salvar consulta.");
@@ -176,3 +180,4 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
     </Container>
   );
 }
+
