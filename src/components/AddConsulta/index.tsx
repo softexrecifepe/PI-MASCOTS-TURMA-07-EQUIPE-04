@@ -21,10 +21,10 @@ type VetconsultationType = {
 
 interface VetconsultationProps {
   onCancel: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  onSubmitSuccess?: () => void;
+  onSubmitSuccess: () => void;
 }
 
-export function Vetconsultation({ onCancel }: VetconsultationProps) {
+export function Vetconsultation({ onCancel, onSubmitSuccess }: VetconsultationProps) {
   const [formData, setFormData] = useState<VetconsultationType>({
     tutorName: "",
     animalName: "",
@@ -83,7 +83,6 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
         onSubmitSuccess(); // Chama a função de sucesso após salvar
       }, 1500);
 
-   
     } catch (error) {
       console.error("Erro ao salvar consulta no localStorage:", error);
       setAlertMessage("Erro ao salvar consulta.");
