@@ -4,10 +4,11 @@ import { HomePageTextsSEO } from "@/components/SEO/seoTexts";
 import { Card } from "@/components/Card";
 import imgExample from "@/ui/assets/images/Logo.svg";
 import cardItems from "@/service/mocks/cardItens";
+import { Container } from "@/ui/styles/Pages/home/styles";
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <SEO
         title={HomePageTextsSEO.title}
         description={HomePageTextsSEO.description}
@@ -27,6 +28,6 @@ export default function Home() {
           description={card.description}
         />
       ))}
-    </div>
+    </Container>
   );
 }
