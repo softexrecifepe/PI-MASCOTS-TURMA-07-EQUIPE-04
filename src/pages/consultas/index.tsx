@@ -3,11 +3,13 @@ import { Header } from "@/components/Header/index";
 import { Vetconsultation } from "@/components/AddConsulta";
 import {
   Title,
+  Container,
   MainContent,
-  Div,
   Lista,
-} from "@/ui/styles/Components/consultas/styles";
-import { Container } from "@/ui/styles/Pages/consultas/styles";
+  LeftContent,
+  RightContent
+} from "@/ui/styles/Pages/consultas/styles";
+
 import { SecundaryButton } from "@/components/Elements/Buttons";
 
 type Vetconsultation = {
@@ -42,7 +44,7 @@ export default function VetQueries() {
 
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <Title>Consultas</Title>
 
       {loading ? (
@@ -53,15 +55,19 @@ export default function VetQueries() {
             Criar Consulta
           </SecundaryButton>
           <MainContent>
-            <Div>
               {consultationsVet?.map((consultations, index) => (
                 <Lista key={index}>
-                  <p>Nome do Tutor: {consultations.tutorName}</p>
-                  <p>Nome do Animal: {consultations.animalName}</p>
-                  <p></p>
+                  <LeftContent>
+                    <p>Nome do Animal: <span>{consultations.animalName}</span></p>
+                    <p>Nome do Tutor: <span>{consultations.tutorName}</span></p>
+                    <p>Idade: <span>{consultations.animalAge}</span></p>
+                  </LeftContent>
+                  <RightContent>
+                    <p>Tipo: <span>{consultations.consultation}</span></p>
+                    <p>Prioridade: <span>{consultations.priority}</span></p>
+                  </RightContent>
                 </Lista>
               ))}
-            </Div>
           </MainContent>
         </div>
       )}

@@ -28,7 +28,7 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
     tutorName: "",
     animalName: "",
     animalAge: 0,
-    consultation: "checkup",
+    consultation: "Check-up",
     priority: "low",
   });
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
@@ -145,10 +145,10 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
             <option value="" disabled hidden>
               Seleciona
             </option>
-            <option value="checkup">Check-up</option>
-            <option value="vaccination">Vacinação</option>
-            <option value="surgery">Cirurgia</option>
-            <option value="routine">Rotina</option>
+            <option value="Check-up">Check-up</option>
+            <option value="Vacinação">Vacinação</option>
+            <option value="Cirurgia">Cirurgia</option>
+            <option value="Rotina">Rotina</option>
           </Select>
         </FormGroup>
         <FormGroup>
@@ -159,13 +159,13 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
             value={formData.priority}
             onChange={handleChange}
           >
-            <option value="low">Baixa</option>
-            <option value="medium">Média</option>
-            <option value="high">Alta</option>
+            <option value="Baixa">Baixa</option>
+            <option value="Média">Média</option>
+            <option value="Alta">Alta</option>
           </Select>
         </FormGroup>
         <SecondaryButtonStyle type="submit" onClick={handleSubmit}>
-          Agendar Consulta
+          Adicionar Consulta
         </SecondaryButtonStyle>
 
         <button type="button" onClick={onCancel}>
