@@ -36,6 +36,10 @@ export const LeftGroup = styled.div`
   align-items: center;
   justify-content: center;
   gap: 3.25rem;
+
+  img {
+    cursor: pointer;
+  }
 `;
 
 export const RightGroup = styled.div`
