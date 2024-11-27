@@ -11,10 +11,15 @@ import {
   Title,
   ButtonContainer,
   GroupCards,
-} from "@/ui/styles/Pages/home/styles"; // Importando os novos estilos
-import { SecundaryButton } from "@/components/Elements/Buttons"; // Importando o botão secundário
+} from "@/ui/styles/Pages/home/styles";
+import { SecundaryButton } from "@/components/Elements/Buttons";
+import { useRouter } from "next/router";
+import { useHeader } from "@/contexts/HeaderContext";
 
 export default function Home() {
+  const router = useRouter();
+  const navBarIsVisible = useHeader();
+
   return (
     <Container>
       <SEO
@@ -26,11 +31,17 @@ export default function Home() {
         image={HomePageTextsSEO.image}
       />
 
-      <ButtonContainer>
+      <ButtonContainer navBarVisible={navBarIsVisible.isNavbarVisible}>
         <Title>Consultas</Title>
-        <SecundaryButton onClick={() => alert("Botão Secundário Clicado!")}>
-          Criar Consulta
-        </SecundaryButton>
+
+        <div>
+          <SecundaryButton onClick={() => router.push("historico")}>
+            Histórico
+          </SecundaryButton>
+          <SecundaryButton onClick={() => alert("Botão Secundário Clicado!")}>
+            Criar Consulta
+          </SecundaryButton>
+        </div>
       </ButtonContainer>
 
       <GroupCards>

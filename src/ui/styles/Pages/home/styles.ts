@@ -13,18 +13,23 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.colors.text.primary};
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<{ navBarVisible?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
-  &::button {
-    margin-top: 10rem;
+  div {
+    transition: 0.3s;
+    display: flex;
+    gap: 1rem;
+    align-self: flex-end;
+    margin-right: ${({ navBarVisible }) =>
+      navBarVisible ? "8.5rem" : "17rem"};
   }
 `;
 
 export const Title = styled.h1`
-  margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.text.primary};
