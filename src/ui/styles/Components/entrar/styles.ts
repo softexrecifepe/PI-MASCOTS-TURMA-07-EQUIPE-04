@@ -55,9 +55,6 @@ export const Title = styled.h2`
 export const Divider = styled.div`
   color: ${({ theme }) => theme.colors.text.primary};
   font-size: ${({ theme }) => theme.sizes.font.quaternary};
-  /* font-weight: 400;
-    padding-top: 6.25rem; 
-    padding-bottom: 2.8125rem; */
 `;
 
 export const Input = styled.input`
@@ -68,8 +65,6 @@ export const Input = styled.input`
   border-bottom: 1px solid ${({ theme }) => theme.colors.border.colors.tertiary};
   font-size: 0.75rem;
   background-color: ${({ theme }) => theme.colors.backgrounds.sextinary};
-  /* color: #00000080;
-    outline: none;  */
 `;
 
 export const StyledLink = styled(Link)`

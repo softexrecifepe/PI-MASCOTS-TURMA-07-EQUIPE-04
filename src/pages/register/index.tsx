@@ -12,7 +12,7 @@ import {
   StyledLink,
   BackgroundImageContainer,
   StyledLink1,
-} from "@/ui/styles/Components/login/styles";
+} from "@/ui/styles/Components/entrar/styles";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
