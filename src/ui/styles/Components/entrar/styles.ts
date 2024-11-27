@@ -44,6 +44,7 @@ export const RightColumn = styled.div`
 
 export const FormContainer = styled.div`
   /* text-align: center; */
+  margin-top: 2rem;
 `;
 
 export const Title = styled.h2`
@@ -55,9 +56,6 @@ export const Title = styled.h2`
 export const Divider = styled.div`
   color: ${({ theme }) => theme.colors.text.primary};
   font-size: ${({ theme }) => theme.sizes.font.quaternary};
-  /* font-weight: 400;
-    padding-top: 6.25rem; 
-    padding-bottom: 2.8125rem; */
 `;
 
 export const Input = styled.input`
@@ -68,11 +66,9 @@ export const Input = styled.input`
   border-bottom: 1px solid ${({ theme }) => theme.colors.border.colors.tertiary};
   font-size: 0.75rem;
   background-color: ${({ theme }) => theme.colors.backgrounds.sextinary};
-  /* color: #00000080;
-    outline: none;  */
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   color: #00000080;
   font-size: 0.6875rem;
   text-align: end;
@@ -86,7 +82,7 @@ export const StyledLink = styled.a`
   }
 `;
 
-export const StyledLink1 = styled.a`
+export const StyledLink1 = styled(Link)`
   color: ${({ theme }) => theme.colors.text.primary};
   font-size: 0.6875rem;
   /* text-align: center;
@@ -111,5 +107,4 @@ export const FooterText = styled.p`
   color: ${({ theme }) => theme.colors.text.primary};
   text-align: end;
   justify-content: flex-end;
-  background-color: yellow;
 `;

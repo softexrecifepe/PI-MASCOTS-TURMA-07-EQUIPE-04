@@ -27,6 +27,8 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
+  position: fixed;
+  z-index: 1;
 `;
 
 export const LeftGroup = styled.div`
@@ -34,6 +36,10 @@ export const LeftGroup = styled.div`
   align-items: center;
   justify-content: center;
   gap: 3.25rem;
+
+  img {
+    cursor: pointer;
+  }
 `;
 
 export const RightGroup = styled.div`

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SaveIconProps {
   width?: number;
@@ -9,7 +9,7 @@ interface SaveIconProps {
 const StockIcon: React.FC<SaveIconProps> = ({
   width = 16,
   height = 16,
-  fill = 'black',
+  fill = "white",
 }) => (
   <svg
     width={width}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface EditIconProps {
   width?: number;
@@ -9,7 +9,7 @@ interface EditIconProps {
 const ServiceIcon: React.FC<EditIconProps> = ({
   width = 20,
   height = 19,
-  fill = 'black',
+  fill = "white",
 }) => (
   <svg
     width={width}
