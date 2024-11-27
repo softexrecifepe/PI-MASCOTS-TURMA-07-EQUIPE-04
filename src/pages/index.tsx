@@ -7,7 +7,7 @@ import { Card } from "@/components/Card";
 import imgExample from "@/ui/assets/images/Logo.svg";
 import cardItems from "@/service/mocks/cardItens";
 import { Container } from "@/ui/styles/Pages/home/styles";
-import { verifyIdToken } from "@/service/firebaseAdmin";
+// import { verifyIdToken } from "@/service/firebaseAdmin";
 
 export default function Home() {
   return (
@@ -35,30 +35,30 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  try {
-    const cookies = nookies.get(ctx);
-    const token = cookies.firebaseAuthToken;
+// export const getServerSideProps: GetServerSideProps = async (ctx) => {
+//   try {
+//     const cookies = nookies.get(ctx);
+//     const token = cookies.firebaseAuthToken;
 
-    if (!token) {
-      return {
-        redirect: {
-          destination: "/login",
-          permanent: false,
-        },
-      };
-    }
+//     if (!token) {
+//       return {
+//         redirect: {
+//           destination: "/login",
+//           permanent: false,
+//         },
+//       };
+//     }
 
-    await verifyIdToken(token);
+//     await verifyIdToken(token);
 
-    return { props: {} };
-  } catch (err) {
-    console.error("Erro de autenticação:", err);
-    return {
-      redirect: {
-        destination: "/entrar",
-        permanent: false,
-      },
-    };
-  }
-};
+//     return { props: {} };
+//   } catch (err) {
+//     console.error("Erro de autenticação:", err);
+//     return {
+//       redirect: {
+//         destination: "/entrar",
+//         permanent: false,
+//       },
+//     };
+//   }
+// };
