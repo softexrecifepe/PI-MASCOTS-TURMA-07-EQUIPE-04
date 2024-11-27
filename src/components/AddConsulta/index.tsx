@@ -172,7 +172,7 @@ export function Vetconsultation({ onCancel }: VetconsultationProps) {
           Cancelar
         </button>
       </Form>
-      {alertMessage && <Alert isError={isError}>{alertMessage}</Alert>}{" "}
+      {alertMessage && <Alert isError={isError}>{alertMessage}</Alert>}
     </Container>
   );
 }
