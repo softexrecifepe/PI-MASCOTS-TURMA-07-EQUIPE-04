@@ -6,6 +6,7 @@ import {
 } from "@/ui/styles/Components/Card/styles";
 import Image from "next/image";
 import React from "react";
+import { PrimaryButton, SecundaryButton } from "../Elements/Buttons";
 
 interface CardProps {
   children?: React.ReactNode;
@@ -45,7 +46,7 @@ export const Card: React.FC<CardProps> = ({
 
       <div>descrição: {description}</div>
 
-      <button>Editar</button>
+      <SecundaryButton>Ver mais</SecundaryButton>
     </Container>
   );
 };

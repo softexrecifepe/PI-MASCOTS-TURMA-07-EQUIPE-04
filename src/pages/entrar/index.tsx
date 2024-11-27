@@ -70,9 +70,10 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <StyledLink href="#">Esqueceu a senha?</StyledLink>
           <PrimaryButton onClick={handleSignIn}>ENTRAR</PrimaryButton>
         </FormContainer>
+
+        <StyledLink href="#">Esqueceu a senha?</StyledLink>
         <FooterText>
           <p>
             <StyledLink1 href="/register">

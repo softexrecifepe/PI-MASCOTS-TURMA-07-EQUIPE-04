@@ -25,7 +25,6 @@ export const ImageWrapper = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  background-color: RED;
   width: 100%;
   gap: 1.68rem;
   align-items: center;

@@ -72,7 +72,7 @@ export const Input = styled.input`
     outline: none;  */
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   color: #00000080;
   font-size: 0.6875rem;
   text-align: end;
@@ -86,7 +86,7 @@ export const StyledLink = styled.a`
   }
 `;
 
-export const StyledLink1 = styled.a`
+export const StyledLink1 = styled(Link)`
   color: ${({ theme }) => theme.colors.text.primary};
   font-size: 0.6875rem;
   /* text-align: center;
@@ -111,5 +111,4 @@ export const FooterText = styled.p`
   color: ${({ theme }) => theme.colors.text.primary};
   text-align: end;
   justify-content: flex-end;
-  background-color: yellow;
 `;
