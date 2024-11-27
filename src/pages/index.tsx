@@ -1,4 +1,7 @@
 import React from "react";
+import { GetServerSideProps } from "next";
+import { verifyIdToken } from "@/service/firebaseAdmin";
+import nookies from "nookies";
 import SEO from "@/components/SEO";
 import { HomePageTextsSEO } from "@/components/SEO/seoTexts";
 import { Card } from "@/components/Card";
@@ -31,3 +34,32 @@ export default function Home() {
     </Container>
   );
 }
+
+//! Proteção de rota
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  try {
+    const cookies = nookies.get(ctx);
+    const token = cookies.firebaseAuthToken;
+
+    if (!token) {
+      return {
+        redirect: {
+          destination: "/login",
+          permanent: false,
+        },
+      };
+    }
+
+    await verifyIdToken(token);
+
+    return { props: {} };
+  } catch (err) {
+    console.error("Erro de autenticação:", err);
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+};
