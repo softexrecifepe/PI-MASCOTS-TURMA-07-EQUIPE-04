@@ -9,20 +9,21 @@ export async function sign(email: string, password: string): Promise<void> {
       email,
       password
     );
-
     const token = await userCredential.user?.getIdToken();
 
     if (token) {
       nookies.set(undefined, "firebaseAuthToken", token, {
         maxAge: 30 * 24 * 60 * 60, // 30 dias
         path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
       });
     }
-  } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(error.message);
+  } catch (error: any) {
+    if (error.code) {
+      throw new Error(`Código de erro: ${error.code} - ${error.message}`);
     } else {
-      throw new Error("An unknown error occurred");
+      throw new Error("Erro desconhecido ao autenticar");
     }
   }
 }

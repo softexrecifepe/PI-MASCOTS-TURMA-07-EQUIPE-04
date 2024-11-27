@@ -35,7 +35,6 @@ export default function Home() {
   );
 }
 
-//! Proteção de rota
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   try {
     const cookies = nookies.get(ctx);

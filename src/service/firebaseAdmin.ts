@@ -1,20 +1,31 @@
-// service/firebaseAdmin.ts
-import admin from "firebase-admin";
+import * as admin from "firebase-admin";
+import * as dotenv from "dotenv";
 
-const serviceAccount = JSON.parse(
-  process.env.FIREBASE_SERVICE_ACCOUNT_KEY || "{}"
-);
+dotenv.config();
 
 if (!admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-  });
-}
-
-export const verifyIdToken = async (token: string) => {
   try {
-    return await admin.auth().verifyIdToken(token);
-  } catch (err) {
-    throw new Error("Token inválido");
+    const serviceAccount = {
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    };
+
+    if (
+      !serviceAccount.projectId ||
+      !serviceAccount.privateKey ||
+      !serviceAccount.clientEmail
+    ) {
+      throw new Error("Faltando credenciais do Firebase.");
+    }
+
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+    });
+  } catch (error) {
+    console.error("Erro ao inicializar o Firebase Admin:", error);
+    throw new Error("Erro ao inicializar o Firebase Admin SDK.");
   }
-};
+} else {
+  console.log("Firebase Admin já inicializado.");
+}
