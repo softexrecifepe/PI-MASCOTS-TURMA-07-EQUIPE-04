@@ -16,8 +16,8 @@ import {
 } from "@/ui/styles/Components/entrar/styles";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
-import { auth } from "@/services/firebaseConfig";
 import { PrimaryButton } from "@/components/Elements/Buttons";
+import { auth } from "@/service/firebaseConfig";
 
 export default function Login() {
   const [email, setEmail] = useState("");

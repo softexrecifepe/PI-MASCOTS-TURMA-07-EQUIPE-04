@@ -16,8 +16,8 @@ import {
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { auth } from "@/services/firebaseConfig";
 import { PrimaryButton } from "@/components/Elements/Buttons";
+import { auth } from "@/service/firebaseConfig";
 
 export default function Register() {
   const [email, setEmail] = useState("");
