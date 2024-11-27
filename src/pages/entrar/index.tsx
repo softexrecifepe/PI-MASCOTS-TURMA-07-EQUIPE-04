@@ -17,15 +17,12 @@ import {
 } from "@/ui/styles/Components/login/styles";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
-import { auth } from "@/service/firebaseConfig";
 import { PrimaryButton } from "@/components/Elements/Buttons";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { sign } from "@/service/authService";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
   const router = useRouter();
 
   const [isMounted, setIsMounted] = useState(false);
@@ -34,21 +31,20 @@ export default function Login() {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (user) {
+  async function handleSignIn() {
+    try {
+      await sign(email, password);
       router.push("/");
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error("Erro ao autenticar:", error.message);
+      } else {
+        console.error("Erro ao autenticar:", error);
+      }
     }
-  }, [user, router]);
-
-  function handleSignIn() {
-    signInWithEmailAndPassword(email, password);
   }
 
   if (!isMounted) return null;
-
-  if (loading) return <p>Carregando...</p>;
-
-  if (error) return <p>Erro ao entrar: {error.message}</p>;
 
   return (
     <LoginContainer>
