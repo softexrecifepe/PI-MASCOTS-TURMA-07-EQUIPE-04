@@ -2,6 +2,8 @@ import React from "react";
 import { Itens, LayoutContainer } from "@/ui/styles/Components/Navbar/styles";
 import { itens } from "./itens";
 import { useRouter } from "next/router";
+import { signOut } from "firebase/auth";
+import LogoutIcon from "@/ui/assets/icons/Logout ";
 
 interface NavbarProps {
   $isVisible: boolean;
@@ -20,6 +22,13 @@ export const Navbar: React.FC<NavbarProps> = ({ $isVisible }) => {
           <div>{item.title}</div>
         </Itens>
       ))}
+
+      <Itens onClick={() => signOut}>
+        <div>
+          <LogoutIcon />
+        </div>
+        <div>Sair</div>
+      </Itens>
     </LayoutContainer>
   );
 };

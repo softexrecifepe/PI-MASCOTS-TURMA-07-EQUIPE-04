@@ -29,10 +29,4 @@ export const itens = [
     title: "Previsão de estoque",
     path: "/consultas",
   },
-  {
-    id: "5",
-    icon: <LogoutIcon />,
-    title: "Sair",
-    path: "/consultas",
-  },
 ];
