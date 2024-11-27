@@ -20,14 +20,14 @@ import { Vetconsultation } from "@/components/AddConsulta";
 export default function Home() {
   const router = useRouter();
   const navBarIsVisible = useHeader();
-  const [isFormVisible, setIsFormVisible] = useState<boolean>(false); // Estado para controlar a exibição do formulário de criação de consulta
+  const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
 
   const handleCreateConsultationClick = () => {
-    setIsFormVisible(true); // Exibe o formulário de criação de consulta
+    setIsFormVisible(true);
   };
 
   const handleCancelForm = () => {
-    setIsFormVisible(false); // Fecha o formulário sem salvar
+    setIsFormVisible(false);
   };
 
   return (
@@ -41,7 +41,6 @@ export default function Home() {
         image={HomePageTextsSEO.image}
       />
 
-      {/* Se o formulário não estiver visível, mostra os botões e cards */}
       {!isFormVisible ? (
         <ButtonContainer navBarVisible={navBarIsVisible.isNavbarVisible}>
           <Title>Consultas</Title>
