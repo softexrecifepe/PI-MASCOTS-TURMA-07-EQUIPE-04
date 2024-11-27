@@ -56,11 +56,9 @@ export default function Home() {
           </div>
         </ButtonContainer>
       ) : (
-        // Se o formulário estiver visível, renderiza o componente de criação de consulta
         <Vetconsultation onCancel={handleCancelForm} />
       )}
 
-      {/* Renderiza os cards se o formulário não estiver visível */}
       {!isFormVisible && (
         <GroupCards>
           {cardItems.map((card) => (
