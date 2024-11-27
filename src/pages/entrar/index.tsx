@@ -56,7 +56,6 @@ export default function Login() {
       </LeftColumn>
       <RightColumn>
         <Title>Entre na sua conta</Title>
-        <Divider>OU</Divider>
         <FormContainer>
           <Input
             type="email"

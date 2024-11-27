@@ -44,6 +44,7 @@ export const RightColumn = styled.div`
 
 export const FormContainer = styled.div`
   /* text-align: center; */
+  margin-top: 2rem;
 `;
 
 export const Title = styled.h2`
