@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import {
   LoginContainer,
   LeftColumn,
@@ -15,51 +16,63 @@ import {
 } from "@/ui/styles/Components/entrar/styles";
 import logo from "@/ui/assets/images/Logo.svg";
 import bgpingo from "@/ui/assets/images/bg-pingo2 2.png";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { auth } from "@/services/firebaseConfig";
 import { PrimaryButton } from "@/components/Elements/Buttons";
+import { sign } from "@/service/authService";
 
-export default function Register() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+  const router = useRouter();
 
-  function handleSignOut() {
-    createUserWithEmailAndPassword(email, password);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  async function handleSignIn() {
+    try {
+      await sign(email, password);
+      router.push("/"); // Redirecionar para a home após o login
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error("Erro ao autenticar:", error.message);
+      } else {
+        console.error("Erro ao autenticar:", error);
+      }
+    }
   }
 
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
+  if (!isMounted) return null;
 
   return (
     <LoginContainer>
       <LeftColumn>
-        <Image alt="logo" src={logo} />
+        <Image alt="logo" src={logo} width={150} height={50} />
         <p>Macosts</p>
         <BackgroundImageContainer>
-          <Image alt="gato" src={bgpingo} />
+          <Image alt="gato" src={bgpingo} style={{ objectFit: "cover" }} />
         </BackgroundImageContainer>
       </LeftColumn>
       <RightColumn>
         <Title>Entre na sua conta</Title>
-        <Divider>OU</Divider>
         <FormContainer>
           <Input
             type="email"
             placeholder="E-mail"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <Input
             type="password"
             placeholder="Senha"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <StyledLink href="#">Esqueceu a senha?</StyledLink>
-          <PrimaryButton onClick={handleSignOut}>Entrar</PrimaryButton>
+          <PrimaryButton onClick={handleSignIn}>ENTRAR</PrimaryButton>
         </FormContainer>
+
+        <StyledLink href="#">Esqueceu a senha?</StyledLink>
         <FooterText>
           <p>
             <StyledLink1 href="/register">

@@ -11,7 +11,7 @@ export const ForecastIcon: React.FC<CustomIconProps> = ({
   width = 20,
   height = 20,
   fill = "none",
-  stroke = "black",
+  stroke = "white",
 }) => (
   <svg
     width={width}

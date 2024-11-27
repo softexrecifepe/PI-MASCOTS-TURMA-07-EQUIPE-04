@@ -43,3 +43,5 @@ public/sw.js
 yarn-error.log
 yarn.lock
 package-lock.json
+
+serviceAccountKey.json
