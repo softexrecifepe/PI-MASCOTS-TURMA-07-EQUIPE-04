@@ -1,54 +1,52 @@
-Clínica Veterinária - Plataforma de Gerenciamento
-Bem-vindo ao projeto de uma plataforma desenvolvida para gerenciar consultas, pacientes e informações gerais de uma clínica veterinária.
+# Clínica Veterinária
 
-Descrição
-Este projeto foi criado com o objetivo de facilitar a administração de clínicas veterinárias, oferecendo ferramentas para organizar atendimentos, manter registros médicos e agendar consultas. A interface intuitiva e responsiva garante uma experiência eficiente tanto para profissionais quanto para clientes.
+Este é um projeto de uma clínica veterinária desenvolvido utilizando as seguintes tecnologias:
 
-Tecnologias Utilizadas
-React: Biblioteca JavaScript para criação de interfaces de usuário dinâmicas e responsivas.
-Next.js: Framework baseado em React que permite renderização no lado do servidor e geração de sites estáticos.
-Styled Components: Biblioteca para estilização de componentes com suporte a CSS-in-JS, permitindo design modular e reutilizável.
-Funcionalidades
-Cadastro de Pacientes: Registro completo de animais e informações de seus tutores.
-Agendamento de Consultas: Sistema de marcação integrado com o calendário dos profissionais.
-Gerenciamento de Prontuários: Histórico médico detalhado dos pacientes, com informações de vacinas, tratamentos e diagnósticos.
-Notificações e Lembretes: Alertas automatizados para consultas futuras ou medicações pendentes.
-Como Executar o Projeto
-Siga os passos abaixo para executar o projeto localmente:
+- **React**
+- **Next.js**
+- **Styled Components**
 
-Clone o Repositório
+## Descrição
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/seu-repositorio.git
-Acesse o Diretório do Projeto
+O projeto tem como objetivo fornecer uma plataforma para gerenciar consultas, pacientes e informações gerais de uma clínica veterinária.
 
-bash
-Copiar código
-cd seu-repositorio
-Instale as Dependências
+## Tecnologias Utilizadas
 
-bash
-Copiar código
-npm install
-Execute o Servidor de Desenvolvimento
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Next.js**: Framework React para renderização do lado do servidor e geração de sites estáticos.
+- **Styled Components**: Biblioteca para estilização de componentes utilizando CSS-in-JS.
 
-bash
-Copiar código
-npm run dev
-Acesse a Aplicação
-Abra o navegador e vá para:
-http://localhost:3000
+## Funcionalidades
 
-Contribuição
-Contribuições são bem-vindas! Caso tenha sugestões, encontre problemas ou queira adicionar novas funcionalidades, sinta-se à vontade para:
+- Cadastro de pacientes
+- Agendamento de consultas
+- Gerenciamento de prontuários
+- Notificações e lembretes
 
-Abrir uma Issue: Relate problemas ou peça melhorias.
-Enviar Pull Requests: Participe ativamente no desenvolvimento.
-Confira as orientações no arquivo CONTRIBUTING.md (se disponível).
+## Como Executar o Projeto
 
-Licença
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+2. Instale as dependências:
+   ```bash
+   cd seu-repositorio
+   npm install
+   ```
+3. Execute o projeto:
+   ```bash
+   npm run dev
+   ```
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
 
 Melhorias Futuras
 Implementação de autenticação e controle de acesso por níveis (administrador, veterinário e cliente).
